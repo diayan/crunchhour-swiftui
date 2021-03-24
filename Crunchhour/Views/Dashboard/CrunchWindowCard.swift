@@ -8,15 +8,20 @@
 import SwiftUI
 
 struct CrunchWindowCard: View {
+   // @Environment(.\presentationMode) var presentationMode
+    @State private var showCloseWindowForm = false
+    
     var body: some View {
         VStack {
-    
+            
             HStack(alignment: .top){
                 VStack(alignment: .leading) {
                     Text("Your five hour window \n opened at 4:00pm")
                         .fixedSize(horizontal: false, vertical: true)
                         .font(.headline)
+                        .foregroundColor(.primary)
                     Text("Closses in 3h 30mins")
+                        .foregroundColor(.primary)
                         .font(.title)
                         .bold()
                 }.padding()
@@ -41,12 +46,18 @@ struct CrunchWindowCard: View {
                     
                     Divider()
                     
-                    Button(action: {}) {
+                    Button(action: {
+                        self.showCloseWindowForm.toggle()
+                    }, label: {
                         Text("Close Window")
                             .bold()
                             .fixedSize()
-                        
-                    }.padding().frame(maxWidth: .infinity)
+                    })
+                    .sheet(isPresented: $showCloseWindowForm, content: {
+                        /*@START_MENU_TOKEN@*//*@PLACEHOLDER=Content@*/Text("Sheet Content")/*@END_MENU_TOKEN@*/
+                    })
+                    .padding()
+                    .frame(maxWidth: .infinity)
                     
                 }.fixedSize(horizontal: false, vertical: true)
             }
