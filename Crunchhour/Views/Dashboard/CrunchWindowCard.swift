@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import Foundation
 
 struct CrunchWindowCard: View {
    // @Environment(.\presentationMode) var presentationMode
@@ -21,9 +22,8 @@ struct CrunchWindowCard: View {
                         .font(.headline)
                         .foregroundColor(.primary)
                     Text("Closses in 3h 30mins")
-                        .foregroundColor(.primary)
+                        .foregroundColor(.black)
                         .font(.title)
-                        .bold()
                 }.padding()
                 
                 Spacer()
@@ -37,7 +37,11 @@ struct CrunchWindowCard: View {
                 Divider()
                 
                 HStack {
-                    Button(action: {}) {
+                    Button(action: {
+                        let fmt = DateFormatter()
+                        print(fmt.shortWeekdaySymbols!)
+                        print("this is not working")
+                    }) {
                         Text("Edit")
                             .bold()
                             .fixedSize()
@@ -53,8 +57,8 @@ struct CrunchWindowCard: View {
                             .bold()
                             .fixedSize()
                     })
-                    .sheet(isPresented: $showCloseWindowForm, content: {
-                        /*@START_MENU_TOKEN@*//*@PLACEHOLDER=Content@*/Text("Sheet Content")/*@END_MENU_TOKEN@*/
+                    .fullScreenCover(isPresented: $showCloseWindowForm, content: {
+                        /*@START_MENU_TOKEN@*//*@PLACEHOLDER=Content@*/Text("Placeholder")/*@END_MENU_TOKEN@*/
                     })
                     .padding()
                     .frame(maxWidth: .infinity)

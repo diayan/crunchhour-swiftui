@@ -12,7 +12,14 @@
 		B2359BA7260900B700BC3777 /* DashboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2359BA6260900B700BC3777 /* DashboardView.swift */; };
 		B2359BAB26091C8200BC3777 /* RecentEatingCardItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2359BAA26091C8200BC3777 /* RecentEatingCardItem.swift */; };
 		B2359BAF260AA32600BC3777 /* RecentEatingCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2359BAE260AA32600BC3777 /* RecentEatingCard.swift */; };
+		B239E1B72611F5D80077A1D4 /* CircularProgress.swift in Sources */ = {isa = PBXBuildFile; fileRef = B239E1B62611F5D80077A1D4 /* CircularProgress.swift */; };
+		B239E1BE26122B350077A1D4 /* CloseWindowEditor.swift in Sources */ = {isa = PBXBuildFile; fileRef = B239E1BD26122B350077A1D4 /* CloseWindowEditor.swift */; };
+		B24D2F772615AF04001E183B /* AnotherProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B24D2F762615AF04001E183B /* AnotherProgressView.swift */; };
 		B26E2F142608084600561217 /* CountdownProgress.swift in Sources */ = {isa = PBXBuildFile; fileRef = B26E2F132608084600561217 /* CountdownProgress.swift */; };
+		B29C398726205E3600F16FA1 /* SectionRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = B29C398626205E3600F16FA1 /* SectionRow.swift */; };
+		B29C39922620725200F16FA1 /* CustomSchedule.swift in Sources */ = {isa = PBXBuildFile; fileRef = B29C39912620725200F16FA1 /* CustomSchedule.swift */; };
+		B29C39A02620752D00F16FA1 /* Schedule.swift in Sources */ = {isa = PBXBuildFile; fileRef = B29C399F2620752D00F16FA1 /* Schedule.swift */; };
+		B29C39A8262075D500F16FA1 /* ScheduleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B29C39A7262075D500F16FA1 /* ScheduleView.swift */; };
 		B2AAF1F72604CAC800E6C4C6 /* CrunchhourApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2AAF1F62604CAC800E6C4C6 /* CrunchhourApp.swift */; };
 		B2AAF1F92604CAC800E6C4C6 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2AAF1F82604CAC800E6C4C6 /* ContentView.swift */; };
 		B2AAF1FB2604CACA00E6C4C6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B2AAF1FA2604CACA00E6C4C6 /* Assets.xcassets */; };
@@ -25,7 +32,14 @@
 		B2359BA6260900B700BC3777 /* DashboardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardView.swift; sourceTree = "<group>"; };
 		B2359BAA26091C8200BC3777 /* RecentEatingCardItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecentEatingCardItem.swift; sourceTree = "<group>"; };
 		B2359BAE260AA32600BC3777 /* RecentEatingCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecentEatingCard.swift; sourceTree = "<group>"; };
+		B239E1B62611F5D80077A1D4 /* CircularProgress.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircularProgress.swift; sourceTree = "<group>"; };
+		B239E1BD26122B350077A1D4 /* CloseWindowEditor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CloseWindowEditor.swift; sourceTree = "<group>"; };
+		B24D2F762615AF04001E183B /* AnotherProgressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnotherProgressView.swift; sourceTree = "<group>"; };
 		B26E2F132608084600561217 /* CountdownProgress.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountdownProgress.swift; sourceTree = "<group>"; };
+		B29C398626205E3600F16FA1 /* SectionRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionRow.swift; sourceTree = "<group>"; };
+		B29C39912620725200F16FA1 /* CustomSchedule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomSchedule.swift; sourceTree = "<group>"; };
+		B29C399F2620752D00F16FA1 /* Schedule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Schedule.swift; sourceTree = "<group>"; };
+		B29C39A7262075D500F16FA1 /* ScheduleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleView.swift; sourceTree = "<group>"; };
 		B2AAF1F32604CAC800E6C4C6 /* Crunchhour.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Crunchhour.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B2AAF1F62604CAC800E6C4C6 /* CrunchhourApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CrunchhourApp.swift; sourceTree = "<group>"; };
 		B2AAF1F82604CAC800E6C4C6 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -54,17 +68,47 @@
 				B2359BA6260900B700BC3777 /* DashboardView.swift */,
 				B2359BAA26091C8200BC3777 /* RecentEatingCardItem.swift */,
 				B2359BAE260AA32600BC3777 /* RecentEatingCard.swift */,
+				B239E1B62611F5D80077A1D4 /* CircularProgress.swift */,
 			);
 			path = Dashboard;
+			sourceTree = "<group>";
+		};
+		B239E1C026122B3D0077A1D4 /* CloseWindow */ = {
+			isa = PBXGroup;
+			children = (
+				B239E1BD26122B350077A1D4 /* CloseWindowEditor.swift */,
+				B24D2F762615AF04001E183B /* AnotherProgressView.swift */,
+			);
+			path = CloseWindow;
 			sourceTree = "<group>";
 		};
 		B2634717260898E300F7DFB6 /* Views */ = {
 			isa = PBXGroup;
 			children = (
 				B2AAF1F82604CAC800E6C4C6 /* ContentView.swift */,
+				B29C398E2620721F00F16FA1 /* Schedules */,
 				B2359BA52609009500BC3777 /* Dashboard */,
+				B239E1C026122B3D0077A1D4 /* CloseWindow */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		B29C398E2620721F00F16FA1 /* Schedules */ = {
+			isa = PBXGroup;
+			children = (
+				B29C398626205E3600F16FA1 /* SectionRow.swift */,
+				B29C39912620725200F16FA1 /* CustomSchedule.swift */,
+				B29C39A7262075D500F16FA1 /* ScheduleView.swift */,
+			);
+			path = Schedules;
+			sourceTree = "<group>";
+		};
+		B29C39992620731800F16FA1 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				B29C399F2620752D00F16FA1 /* Schedule.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 		B2AAF1EA2604CAC800E6C4C6 = {
@@ -87,6 +131,7 @@
 			isa = PBXGroup;
 			children = (
 				B2AAF1F62604CAC800E6C4C6 /* CrunchhourApp.swift */,
+				B29C39992620731800F16FA1 /* Model */,
 				B2634717260898E300F7DFB6 /* Views */,
 				B2AAF1FA2604CACA00E6C4C6 /* Assets.xcassets */,
 				B2AAF1FF2604CACA00E6C4C6 /* Info.plist */,
@@ -175,10 +220,17 @@
 				B2359BA02608C66C00BC3777 /* CrunchNoteCard.swift in Sources */,
 				B2359BA7260900B700BC3777 /* DashboardView.swift in Sources */,
 				B26E2F142608084600561217 /* CountdownProgress.swift in Sources */,
+				B29C39A02620752D00F16FA1 /* Schedule.swift in Sources */,
 				B2AAF1F92604CAC800E6C4C6 /* ContentView.swift in Sources */,
+				B29C39A8262075D500F16FA1 /* ScheduleView.swift in Sources */,
 				B2359BAF260AA32600BC3777 /* RecentEatingCard.swift in Sources */,
+				B24D2F772615AF04001E183B /* AnotherProgressView.swift in Sources */,
+				B239E1B72611F5D80077A1D4 /* CircularProgress.swift in Sources */,
+				B29C39922620725200F16FA1 /* CustomSchedule.swift in Sources */,
+				B239E1BE26122B350077A1D4 /* CloseWindowEditor.swift in Sources */,
 				B2359B9D2608C5EE00BC3777 /* CrunchWindowCard.swift in Sources */,
 				B2AAF1F72604CAC800E6C4C6 /* CrunchhourApp.swift in Sources */,
+				B29C398726205E3600F16FA1 /* SectionRow.swift in Sources */,
 				B2359BAB26091C8200BC3777 /* RecentEatingCardItem.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -58,7 +58,7 @@ struct DashboardView: View {
                         RecentEatingCard()
                         
                         HStack {
-                            Text("Previous Fastrings")
+                            Text("Previous Fasting")
                                 .foregroundColor(.secondary)
                                 .bold()
                                 .font(.subheadline)
