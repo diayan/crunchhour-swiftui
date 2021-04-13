@@ -9,7 +9,7 @@ import SwiftUI
 
 struct CustomSchedule: View {
     @State private var enableNotification = false
-
+    
     var body: some View {
         Form {
             Section(header: Text("")) {
@@ -18,7 +18,7 @@ struct CustomSchedule: View {
                         .font(.title2)
                         .foregroundColor(.primary)
                         .bold()
-                })
+                }).pickerStyle(SegmentedPickerStyle())
                 
                 if enableNotification {
                     //wrapping List within a navigationlink will show the reveal button
@@ -26,10 +26,10 @@ struct CustomSchedule: View {
                         Text("5 and half").bold() + Text(" hour timed window")
                         Text("Starting at ") + Text("12:00 pm").bold()
                     }
-                    
                 }
             }
-        }    }
+        }
+    }
 }
 
 struct CustomSchedule_Previews: PreviewProvider {

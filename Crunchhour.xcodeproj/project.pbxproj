@@ -14,6 +14,7 @@
 		B2359BAF260AA32600BC3777 /* RecentEatingCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2359BAE260AA32600BC3777 /* RecentEatingCard.swift */; };
 		B239E1B72611F5D80077A1D4 /* CircularProgress.swift in Sources */ = {isa = PBXBuildFile; fileRef = B239E1B62611F5D80077A1D4 /* CircularProgress.swift */; };
 		B239E1BE26122B350077A1D4 /* CloseWindowEditor.swift in Sources */ = {isa = PBXBuildFile; fileRef = B239E1BD26122B350077A1D4 /* CloseWindowEditor.swift */; };
+		B244267D262598FD00310ABA /* PickerTest .swift in Sources */ = {isa = PBXBuildFile; fileRef = B244267C262598FD00310ABA /* PickerTest .swift */; };
 		B24D2F772615AF04001E183B /* AnotherProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B24D2F762615AF04001E183B /* AnotherProgressView.swift */; };
 		B26E2F142608084600561217 /* CountdownProgress.swift in Sources */ = {isa = PBXBuildFile; fileRef = B26E2F132608084600561217 /* CountdownProgress.swift */; };
 		B29C398726205E3600F16FA1 /* SectionRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = B29C398626205E3600F16FA1 /* SectionRow.swift */; };
@@ -34,6 +35,7 @@
 		B2359BAE260AA32600BC3777 /* RecentEatingCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecentEatingCard.swift; sourceTree = "<group>"; };
 		B239E1B62611F5D80077A1D4 /* CircularProgress.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircularProgress.swift; sourceTree = "<group>"; };
 		B239E1BD26122B350077A1D4 /* CloseWindowEditor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CloseWindowEditor.swift; sourceTree = "<group>"; };
+		B244267C262598FD00310ABA /* PickerTest .swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PickerTest .swift"; sourceTree = "<group>"; };
 		B24D2F762615AF04001E183B /* AnotherProgressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnotherProgressView.swift; sourceTree = "<group>"; };
 		B26E2F132608084600561217 /* CountdownProgress.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountdownProgress.swift; sourceTree = "<group>"; };
 		B29C398626205E3600F16FA1 /* SectionRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionRow.swift; sourceTree = "<group>"; };
@@ -69,6 +71,7 @@
 				B2359BAA26091C8200BC3777 /* RecentEatingCardItem.swift */,
 				B2359BAE260AA32600BC3777 /* RecentEatingCard.swift */,
 				B239E1B62611F5D80077A1D4 /* CircularProgress.swift */,
+				B244267C262598FD00310ABA /* PickerTest .swift */,
 			);
 			path = Dashboard;
 			sourceTree = "<group>";
@@ -227,6 +230,7 @@
 				B24D2F772615AF04001E183B /* AnotherProgressView.swift in Sources */,
 				B239E1B72611F5D80077A1D4 /* CircularProgress.swift in Sources */,
 				B29C39922620725200F16FA1 /* CustomSchedule.swift in Sources */,
+				B244267D262598FD00310ABA /* PickerTest .swift in Sources */,
 				B239E1BE26122B350077A1D4 /* CloseWindowEditor.swift in Sources */,
 				B2359B9D2608C5EE00BC3777 /* CrunchWindowCard.swift in Sources */,
 				B2AAF1F72604CAC800E6C4C6 /* CrunchhourApp.swift in Sources */,

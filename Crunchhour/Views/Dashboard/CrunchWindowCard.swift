@@ -11,6 +11,8 @@ import Foundation
 struct CrunchWindowCard: View {
    // @Environment(.\presentationMode) var presentationMode
     @State private var showCloseWindowForm = false
+    @State private var showDatePicker      = false
+    @State private var startDate = Date()
     
     var body: some View {
         VStack {
@@ -38,15 +40,13 @@ struct CrunchWindowCard: View {
                 
                 HStack {
                     Button(action: {
-                        let fmt = DateFormatter()
-                        print(fmt.shortWeekdaySymbols!)
-                        print("this is not working")
+                        self.showDatePicker.toggle()
                     }) {
                         Text("Edit")
                             .bold()
                             .fixedSize()
-                        
-                    }.padding().frame(maxWidth: .infinity)
+                    }.padding()
+                    .frame(maxWidth: .infinity)
                     
                     Divider()
                     
@@ -62,7 +62,6 @@ struct CrunchWindowCard: View {
                     })
                     .padding()
                     .frame(maxWidth: .infinity)
-                    
                 }.fixedSize(horizontal: false, vertical: true)
             }
         }.frame( height:200)
