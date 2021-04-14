@@ -6,9 +6,21 @@
 //
 
 import Foundation
+import SwiftUI
 
 struct Schedule {
-    var day: Date
+    var day: DayOfWeek
     var duration: String
     var startTime: Date
+    @State var isNotify = false
+}
+
+enum DayOfWeek: String, CaseIterable {
+    case Sunday
+    case Monday
+    case Tuesday
+    case Wednesday
+    case Thursday
+    case Friday
+    case Saturday
 }
