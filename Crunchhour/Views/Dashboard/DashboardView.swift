@@ -8,6 +8,8 @@
 import SwiftUI
 
 struct DashboardView: View {
+    @State private var showSettings = false
+
     var body: some View {
         return ZStack() {
             NavigationView {
@@ -72,16 +74,20 @@ struct DashboardView: View {
                 }
                 .navigationBarTitle(
                     Text("Dashboard"))
-                .navigationBarItems(leading: Button(action: /*@START_MENU_TOKEN@*/{}/*@END_MENU_TOKEN@*/, label: {
+                .navigationBarItems(leading: Button(action: {
+                    
+                }, label: {
                     Text("About")
                         .foregroundColor(.blue)
                 }).font(Font.system(size: 16, weight: .semibold, design: .rounded)),
-                trailing: Button(action: /*@START_MENU_TOKEN@*/{}/*@END_MENU_TOKEN@*/, label: {
+                trailing: Button(action: {
+                    self.showSettings.toggle()
+                }, label: {
                     Image(systemName: "gearshape")
                         .foregroundColor(.blue)
-                }).font(Font.system(size: 20, weight: .semibold, design: .rounded))
-                
-                )
+                }).font(Font.system(size: 20, weight: .semibold, design: .rounded)).sheet(isPresented: $showSettings, content: {
+                    /*@START_MENU_TOKEN@*//*@PLACEHOLDER=Content@*/Text("Sheet Content")/*@END_MENU_TOKEN@*/
+                }))
             }
         }
     }
