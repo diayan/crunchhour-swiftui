@@ -23,6 +23,8 @@
 		B284453F262DD9EC0073E68B /* DisplayOptions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B284453E262DD9EC0073E68B /* DisplayOptions.swift */; };
 		B2844542262DDB580073E68B /* DisplayOptionsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2844541262DDB580073E68B /* DisplayOptionsModel.swift */; };
 		B2844545262DE8290073E68B /* EndFastView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2844544262DE8290073E68B /* EndFastView.swift */; };
+		B284454A262F00270073E68B /* CameraView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2844549262F00260073E68B /* CameraView.swift */; };
+		B284454D262F017C0073E68B /* CameraModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B284454C262F017C0073E68B /* CameraModel.swift */; };
 		B29C39A02620752D00F16FA1 /* Schedule.swift in Sources */ = {isa = PBXBuildFile; fileRef = B29C399F2620752D00F16FA1 /* Schedule.swift */; };
 		B29C39A8262075D500F16FA1 /* ScheduleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B29C39A7262075D500F16FA1 /* ScheduleView.swift */; };
 		B2AAF1F72604CAC800E6C4C6 /* CrunchhourApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2AAF1F62604CAC800E6C4C6 /* CrunchhourApp.swift */; };
@@ -48,6 +50,8 @@
 		B284453E262DD9EC0073E68B /* DisplayOptions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DisplayOptions.swift; sourceTree = "<group>"; };
 		B2844541262DDB580073E68B /* DisplayOptionsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DisplayOptionsModel.swift; sourceTree = "<group>"; };
 		B2844544262DE8290073E68B /* EndFastView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndFastView.swift; sourceTree = "<group>"; };
+		B2844549262F00260073E68B /* CameraView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraView.swift; sourceTree = "<group>"; };
+		B284454C262F017C0073E68B /* CameraModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraModel.swift; sourceTree = "<group>"; };
 		B29C399F2620752D00F16FA1 /* Schedule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Schedule.swift; sourceTree = "<group>"; };
 		B29C39A7262075D500F16FA1 /* ScheduleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleView.swift; sourceTree = "<group>"; };
 		B2AAF1F32604CAC800E6C4C6 /* Crunchhour.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Crunchhour.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -89,6 +93,7 @@
 			children = (
 				B239E1BD26122B350077A1D4 /* CloseWindowEditor.swift */,
 				B2844544262DE8290073E68B /* EndFastView.swift */,
+				B2844549262F00260073E68B /* CameraView.swift */,
 			);
 			path = CloseWindow;
 			sourceTree = "<group>";
@@ -130,6 +135,7 @@
 				B29C399F2620752D00F16FA1 /* Schedule.swift */,
 				B2483E8F2628730200FB8C66 /* NotificationModel.swift */,
 				B2844541262DDB580073E68B /* DisplayOptionsModel.swift */,
+				B284454C262F017C0073E68B /* CameraModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -242,6 +248,7 @@
 			files = (
 				B2483E902628730200FB8C66 /* NotificationModel.swift in Sources */,
 				B2359BA02608C66C00BC3777 /* CrunchNoteCard.swift in Sources */,
+				B284454D262F017C0073E68B /* CameraModel.swift in Sources */,
 				B2844542262DDB580073E68B /* DisplayOptionsModel.swift in Sources */,
 				B2359BA7260900B700BC3777 /* DashboardView.swift in Sources */,
 				B26E2F142608084600561217 /* CountdownProgress.swift in Sources */,
@@ -255,6 +262,7 @@
 				B2844545262DE8290073E68B /* EndFastView.swift in Sources */,
 				B239E1B72611F5D80077A1D4 /* CircularProgress.swift in Sources */,
 				B244267D262598FD00310ABA /* PickerTest .swift in Sources */,
+				B284454A262F00270073E68B /* CameraView.swift in Sources */,
 				B239E1BE26122B350077A1D4 /* CloseWindowEditor.swift in Sources */,
 				B2359B9D2608C5EE00BC3777 /* CrunchWindowCard.swift in Sources */,
 				B284453F262DD9EC0073E68B /* DisplayOptions.swift in Sources */,
