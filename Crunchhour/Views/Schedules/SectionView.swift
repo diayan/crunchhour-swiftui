@@ -24,7 +24,7 @@ struct SectionView: View {
                 List {
                     Text("\(schedule.duration)").bold() + Text(" hour timed window")
                     Text("Starting at ") + Text("\(schedule.startTime)").bold()
-                }
+                }.padding()
             }
         }
     }

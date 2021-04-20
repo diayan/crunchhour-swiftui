@@ -16,6 +16,7 @@ struct SettingSection: View {
             Text("\(notification.title)").bold() + Text("\n\(notification.message)")
             
         }).pickerStyle(SegmentedPickerStyle())
+        .padding()
     }
 }
 
