@@ -27,27 +27,35 @@ struct SettingsView: View {
     ]
     
     var body: some View {
-        Form {
-            Section(header: Text("Custom Schedule")) {
-                Text("Customize your daily eating window")
-                    .pickerStyle(SegmentedPickerStyle())
-            }
-        
-            Section(header: Text("Notifications")) {
-                SettingSection(notification: notification[0])
-                SettingSection(notification: notification[1])
-                SettingSection(notification: notification[2])
-                SettingSection(notification: notification[3])
-                SettingSection(notification: notification[4])
-                SettingSection(notification: notification[5])
-                SettingSection(notification: notification[6])
-                SettingSection(notification: notification[7])
-            }
+
+        VStack {
             
-            Section(header: Text("Display Options")){
-                DisplayOptions(displayOption: displayOption[0])
-                DisplayOptions(displayOption: displayOption[1])
-                DisplayOptions(displayOption: displayOption[2])
+            Text("Settings")
+                .font(.title)
+                .bold()
+            
+            Form {
+                Section(header: Text("Custom Schedule")) {
+                    Text("Customize your daily eating window")
+                        .pickerStyle(SegmentedPickerStyle())
+                }
+                
+                Section(header: Text("Notifications")) {
+                    SettingSection(notification: notification[0])
+                    SettingSection(notification: notification[1])
+                    SettingSection(notification: notification[2])
+                    SettingSection(notification: notification[3])
+                    SettingSection(notification: notification[4])
+                    SettingSection(notification: notification[5])
+                    SettingSection(notification: notification[6])
+                    SettingSection(notification: notification[7])
+                }
+                
+                Section(header: Text("Display Options")){
+                    DisplayOptions(displayOption: displayOption[0])
+                    DisplayOptions(displayOption: displayOption[1])
+                    DisplayOptions(displayOption: displayOption[2])
+                }
             }
         }
     }
