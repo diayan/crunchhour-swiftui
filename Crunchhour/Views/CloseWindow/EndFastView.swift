@@ -35,41 +35,47 @@ struct EndFastView: View {
             
             HStack(alignment: .center){
                 CountdownProgress()
-                Spacer()
                 VStack(alignment: .leading) {
-                    
                     Text("You fasted for 10 hours !")
-                }
+                    HStack {
+                        Image(uiImage: UIImage(systemName: "clock")!)
+                        Text("14h 13m")
+                    }
+                }.padding(.leading)
+                Spacer()
+
             }.padding(.bottom)
             .padding(.top)
             
-            HStack {
-                Text("Started")
-                    .foregroundColor(.primary)
-                    .bold()
+            Group {
+                HStack {
+                    Text("Started")
+                        .foregroundColor(.primary)
+                        .bold()
+                    
+                    Spacer()
+                    
+                    Text("\(startDate, formatter: Self.taskDateFormat)")
+                        .foregroundColor(.secondary)
+                    Image(uiImage: UIImage(systemName: "pencil")!)
+                        .padding(2)
+                }.padding(.bottom)
+                .padding(.top)
                 
-                Spacer()
-                
-                Text("\(startDate, formatter: Self.taskDateFormat)")
-                    .foregroundColor(.secondary)
-                Image(uiImage: UIImage(systemName: "pencil")!)
-                    .padding(2)
-            }.padding(.bottom)
-            .padding(.top)
-            
-            HStack {
-                Text("Finished")
-                    .foregroundColor(.primary)
-                    .bold()
-                
-                Spacer()
-                
-                Text("\(startDate, formatter: Self.taskDateFormat)")
-                    .foregroundColor(.secondary)
-                Image(uiImage: UIImage(systemName: "pencil")!)
-                    .padding(2)
-                
-            }.padding(.bottom)
+                HStack {
+                    Text("Finished")
+                        .foregroundColor(.primary)
+                        .bold()
+                    
+                    Spacer()
+                    
+                    Text("\(startDate, formatter: Self.taskDateFormat)")
+                        .foregroundColor(.secondary)
+                    Image(uiImage: UIImage(systemName: "pencil")!)
+                        .padding(2)
+                    
+                }.padding(.bottom)
+            }
             
             Divider()
             
@@ -90,6 +96,19 @@ struct EndFastView: View {
                     }.padding()
                 }.frame(height: /*@START_MENU_TOKEN@*/100/*@END_MENU_TOKEN@*/, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
             }
+            
+        
+            Button(action: /*@START_MENU_TOKEN@*/{}/*@END_MENU_TOKEN@*/, label: {
+                HStack {
+                    Image(systemName: "camera")
+                    Text("Share your fast breaker")
+                }
+                .frame(minWidth: 0, maxWidth: .infinity)
+                .padding()
+                .foregroundColor(.red)
+                .background(Color.white)
+                .cornerRadius(40)
+            })
             
             Group {
             HStack {
@@ -125,7 +144,7 @@ struct EndFastView: View {
                     }
                 }
             }
-            
+        
            Spacer()
             
             HStack {

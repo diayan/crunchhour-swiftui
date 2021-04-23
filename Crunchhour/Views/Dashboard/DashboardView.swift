@@ -85,8 +85,8 @@ struct DashboardView: View {
                 }, label: {
                     Image(systemName: "gearshape")
                         .foregroundColor(.blue)
-                }).font(Font.system(size: 20, weight: .semibold, design: .rounded)).sheet(isPresented: $showSettings, content: {
-                    /*@START_MENU_TOKEN@*//*@PLACEHOLDER=Content@*/Text("Sheet Content")/*@END_MENU_TOKEN@*/
+                }).font(Font.system(size: 20, weight: .semibold, design: .rounded)).fullScreenCover(isPresented: $showSettings, content: {
+                    SettingsView()
                 }))
             }
         }
