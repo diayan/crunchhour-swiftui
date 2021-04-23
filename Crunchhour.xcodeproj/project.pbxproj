@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B234C2C92632EDA500DF71D8 /* EmojiFeeling.swift in Sources */ = {isa = PBXBuildFile; fileRef = B234C2C82632EDA500DF71D8 /* EmojiFeeling.swift */; };
+		B234C2CC2632F61700DF71D8 /* EmojiView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B234C2CB2632F61700DF71D8 /* EmojiView.swift */; };
 		B2359B9D2608C5EE00BC3777 /* CrunchWindowCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2359B9C2608C5EE00BC3777 /* CrunchWindowCard.swift */; };
 		B2359BA02608C66C00BC3777 /* CrunchNoteCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2359B9F2608C66C00BC3777 /* CrunchNoteCard.swift */; };
 		B2359BA7260900B700BC3777 /* DashboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2359BA6260900B700BC3777 /* DashboardView.swift */; };
@@ -34,6 +36,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		B234C2C82632EDA500DF71D8 /* EmojiFeeling.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmojiFeeling.swift; sourceTree = "<group>"; };
+		B234C2CB2632F61700DF71D8 /* EmojiView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmojiView.swift; sourceTree = "<group>"; };
 		B2359B9C2608C5EE00BC3777 /* CrunchWindowCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CrunchWindowCard.swift; sourceTree = "<group>"; };
 		B2359B9F2608C66C00BC3777 /* CrunchNoteCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CrunchNoteCard.swift; sourceTree = "<group>"; };
 		B2359BA6260900B700BC3777 /* DashboardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardView.swift; sourceTree = "<group>"; };
@@ -73,6 +77,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		B234C2CE2632F62200DF71D8 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				B234C2CB2632F61700DF71D8 /* EmojiView.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
 		B2359BA52609009500BC3777 /* Dashboard */ = {
 			isa = PBXGroup;
 			children = (
@@ -112,6 +124,7 @@
 			isa = PBXGroup;
 			children = (
 				B2AAF1F82604CAC800E6C4C6 /* ContentView.swift */,
+				B234C2CE2632F62200DF71D8 /* Helpers */,
 				B29C398E2620721F00F16FA1 /* Schedules */,
 				B2359BA52609009500BC3777 /* Dashboard */,
 				B239E1C026122B3D0077A1D4 /* CloseWindow */,
@@ -136,6 +149,7 @@
 				B2483E8F2628730200FB8C66 /* NotificationModel.swift */,
 				B2844541262DDB580073E68B /* DisplayOptionsModel.swift */,
 				B284454C262F017C0073E68B /* CameraModel.swift */,
+				B234C2C82632EDA500DF71D8 /* EmojiFeeling.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -248,6 +262,7 @@
 			files = (
 				B2483E902628730200FB8C66 /* NotificationModel.swift in Sources */,
 				B2359BA02608C66C00BC3777 /* CrunchNoteCard.swift in Sources */,
+				B234C2C92632EDA500DF71D8 /* EmojiFeeling.swift in Sources */,
 				B284454D262F017C0073E68B /* CameraModel.swift in Sources */,
 				B2844542262DDB580073E68B /* DisplayOptionsModel.swift in Sources */,
 				B2359BA7260900B700BC3777 /* DashboardView.swift in Sources */,
@@ -262,6 +277,7 @@
 				B2844545262DE8290073E68B /* EndFastView.swift in Sources */,
 				B239E1B72611F5D80077A1D4 /* CircularProgress.swift in Sources */,
 				B244267D262598FD00310ABA /* PickerTest .swift in Sources */,
+				B234C2CC2632F61700DF71D8 /* EmojiView.swift in Sources */,
 				B284454A262F00270073E68B /* CameraView.swift in Sources */,
 				B239E1BE26122B350077A1D4 /* CloseWindowEditor.swift in Sources */,
 				B2359B9D2608C5EE00BC3777 /* CrunchWindowCard.swift in Sources */,
