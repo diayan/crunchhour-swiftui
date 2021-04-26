@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct CrunchNoteCard: View {
+    @State private var editNote = false
     var body: some View {
         VStack {
             HStack(alignment: .center){
@@ -41,12 +42,19 @@ struct CrunchNoteCard: View {
             VStack(spacing: 0) {
                 Divider()
                 HStack {
-                    Button(action: {}) {
+                    Button(action: {
+                        self.editNote.toggle()
+                    }, label: {
                         Text("Edit Note")
                             .bold()
                             .fixedSize()
 
-                    }.padding().frame(maxWidth: .infinity)
+                    }).padding()
+                    .frame(maxWidth: .infinity)
+                    .fullScreenCover(isPresented: $editNote, content: {
+                        EndFastView()
+                    })
+                                        
                 }
             }
             

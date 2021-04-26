@@ -22,6 +22,8 @@
 		B2483E8526286FFC00FB8C66 /* SettingSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2483E8426286FFC00FB8C66 /* SettingSection.swift */; };
 		B2483E902628730200FB8C66 /* NotificationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2483E8F2628730200FB8C66 /* NotificationModel.swift */; };
 		B26E2F142608084600561217 /* CountdownProgress.swift in Sources */ = {isa = PBXBuildFile; fileRef = B26E2F132608084600561217 /* CountdownProgress.swift */; };
+		B27940D82636A31300C82251 /* GraphCapsule.swift in Sources */ = {isa = PBXBuildFile; fileRef = B27940D72636A31300C82251 /* GraphCapsule.swift */; };
+		B27940DB2636A3B900C82251 /* FastingGraph.swift in Sources */ = {isa = PBXBuildFile; fileRef = B27940DA2636A3B900C82251 /* FastingGraph.swift */; };
 		B284453F262DD9EC0073E68B /* DisplayOptions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B284453E262DD9EC0073E68B /* DisplayOptions.swift */; };
 		B2844542262DDB580073E68B /* DisplayOptionsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2844541262DDB580073E68B /* DisplayOptionsModel.swift */; };
 		B2844545262DE8290073E68B /* EndFastView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2844544262DE8290073E68B /* EndFastView.swift */; };
@@ -51,6 +53,8 @@
 		B2483E8426286FFC00FB8C66 /* SettingSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingSection.swift; sourceTree = "<group>"; };
 		B2483E8F2628730200FB8C66 /* NotificationModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationModel.swift; sourceTree = "<group>"; };
 		B26E2F132608084600561217 /* CountdownProgress.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountdownProgress.swift; sourceTree = "<group>"; };
+		B27940D72636A31300C82251 /* GraphCapsule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GraphCapsule.swift; sourceTree = "<group>"; };
+		B27940DA2636A3B900C82251 /* FastingGraph.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FastingGraph.swift; sourceTree = "<group>"; };
 		B284453E262DD9EC0073E68B /* DisplayOptions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DisplayOptions.swift; sourceTree = "<group>"; };
 		B2844541262DDB580073E68B /* DisplayOptionsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DisplayOptionsModel.swift; sourceTree = "<group>"; };
 		B2844544262DE8290073E68B /* EndFastView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndFastView.swift; sourceTree = "<group>"; };
@@ -123,14 +127,32 @@
 		B2634717260898E300F7DFB6 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				B27940D426369E5700C82251 /* Timeline */,
 				B2AAF1F82604CAC800E6C4C6 /* ContentView.swift */,
 				B234C2CE2632F62200DF71D8 /* Helpers */,
 				B29C398E2620721F00F16FA1 /* Schedules */,
 				B2359BA52609009500BC3777 /* Dashboard */,
 				B239E1C026122B3D0077A1D4 /* CloseWindow */,
 				B2483E8026286F7B00FB8C66 /* Settings */,
+				B27940DD2636A40200C82251 /* Graphs */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		B27940D426369E5700C82251 /* Timeline */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Timeline;
+			sourceTree = "<group>";
+		};
+		B27940DD2636A40200C82251 /* Graphs */ = {
+			isa = PBXGroup;
+			children = (
+				B27940D72636A31300C82251 /* GraphCapsule.swift */,
+				B27940DA2636A3B900C82251 /* FastingGraph.swift */,
+			);
+			path = Graphs;
 			sourceTree = "<group>";
 		};
 		B29C398E2620721F00F16FA1 /* Schedules */ = {
@@ -261,6 +283,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B2483E902628730200FB8C66 /* NotificationModel.swift in Sources */,
+				B27940DB2636A3B900C82251 /* FastingGraph.swift in Sources */,
 				B2359BA02608C66C00BC3777 /* CrunchNoteCard.swift in Sources */,
 				B234C2C92632EDA500DF71D8 /* EmojiFeeling.swift in Sources */,
 				B284454D262F017C0073E68B /* CameraModel.swift in Sources */,
@@ -280,6 +303,7 @@
 				B234C2CC2632F61700DF71D8 /* EmojiView.swift in Sources */,
 				B284454A262F00270073E68B /* CameraView.swift in Sources */,
 				B239E1BE26122B350077A1D4 /* CloseWindowEditor.swift in Sources */,
+				B27940D82636A31300C82251 /* GraphCapsule.swift in Sources */,
 				B2359B9D2608C5EE00BC3777 /* CrunchWindowCard.swift in Sources */,
 				B284453F262DD9EC0073E68B /* DisplayOptions.swift in Sources */,
 				B2AAF1F72604CAC800E6C4C6 /* CrunchhourApp.swift in Sources */,
