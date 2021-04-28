@@ -70,7 +70,8 @@ struct DashboardView: View {
                                 .padding(.bottom, 8)
                             Spacer()
                         }
-                    }.background(Color("background"))
+                    }
+                    .background(Color("background"))
                 }
                 .navigationBarTitle(
                     Text("Dashboard"))
@@ -86,7 +87,7 @@ struct DashboardView: View {
                     Image(systemName: "gearshape")
                         .foregroundColor(.blue)
                 }).font(Font.system(size: 20, weight: .semibold, design: .rounded)).fullScreenCover(isPresented: $showSettings, content: {
-                    SettingsView()
+                    SettingsView(schedule: Schedule(day: .Monday, duration: "3 hrs", startTime: Date()))
                 }))
             }
         }
