@@ -38,7 +38,7 @@ struct CrunchWindowCard: View {
                 
                 Divider()
                 
-                HStack {
+                HStack() {
                     Button(action: {
                         self.showDatePicker.toggle()
                     }) {
@@ -65,7 +65,7 @@ struct CrunchWindowCard: View {
                 }.fixedSize(horizontal: false, vertical: true)
             }
         }.frame( height:200)
-        .background(Color("foreground"))
+        .background(Color(.white))
         .cornerRadius(15)
         .padding(.leading)
         .padding(.trailing)

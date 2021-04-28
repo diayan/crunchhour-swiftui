@@ -14,20 +14,20 @@ struct GraphCapsule: View {
     var range: Range<Double>
     var overallRange: Range<Double>
 
-    var heightRatio: CGFloat {
-        max(CGFloat(magnitude(of: range) / magnitude(of: overallRange)), 0.15)
-    }
-
-    var offsetRatio: CGFloat {
-        CGFloat((range.lowerBound - overallRange.lowerBound) / magnitude(of: overallRange))
-    }
+//    var heightRatio: CGFloat {
+//        max(CGFloat(magnitude(of: range) / magnitude(of: overallRange)), 0.15)
+//    }
+//
+//    var offsetRatio: CGFloat {
+//        CGFloat((range.lowerBound - overallRange.lowerBound) / magnitude(of: overallRange))
+//    }
 
     
     var body: some View {
         Capsule()
             .fill(Color.white)
-            .frame(height: height * heightRatio)
-            .offset(x: 0, y: height * -offsetRatio)
+//            .frame(height: height * heightRatio)
+//            .offset(x: 0, y: height * -offsetRatio)
     }    
 }
 

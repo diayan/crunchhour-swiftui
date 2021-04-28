@@ -32,7 +32,7 @@ struct DashboardView: View {
                         CrunchWindowCard()
                         
                         HStack {
-                            Text("Today's Note")
+                            Text("Recent Note")
                                 .foregroundColor(.secondary)
                                 .bold()
                                 .font(.subheadline)
@@ -46,7 +46,7 @@ struct DashboardView: View {
                         CrunchNoteCard()
                         
                         HStack {
-                            Text("Recent Eatings")
+                            Text("Recent Fast")
                                 .foregroundColor(.secondary)
                                 .bold()
                                 .font(.subheadline)
@@ -57,7 +57,7 @@ struct DashboardView: View {
                             Spacer()
                         }
                         
-                        RecentEatingCard()
+                        FastingGraph()
                         
                         HStack {
                             Text("Previous Fasting")
@@ -71,7 +71,7 @@ struct DashboardView: View {
                             Spacer()
                         }
                     }
-                    .background(Color("background"))
+                    .background(Color("foreground"))
                 }
                 .navigationBarTitle(
                     Text("Dashboard"))

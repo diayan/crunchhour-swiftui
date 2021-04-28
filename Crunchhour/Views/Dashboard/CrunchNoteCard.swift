@@ -54,16 +54,15 @@ struct CrunchNoteCard: View {
                     .fullScreenCover(isPresented: $editNote, content: {
                         EndFastView()
                     })
-                                        
                 }
             }
-            
         }
-        .background(Color("foreground"))
+        .background(Color(.white))
         .cornerRadius(15)
         .padding(.leading)
         .padding(.trailing)
-        .shadow(color: Color.black, radius: 0, x: 0.0 , y: 0.2)    }
+        .shadow(color: Color.black, radius: 0, x: 0.0 , y: 0.2)
+    }
 }
 
 
