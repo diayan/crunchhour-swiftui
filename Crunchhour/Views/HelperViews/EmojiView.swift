@@ -25,7 +25,7 @@ struct EmojiView: View {
                 .bold()
                 .foregroundColor(.secondary)
                 .padding(4)
-        }
+        }.padding(4)
     }
 }
 

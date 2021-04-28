@@ -58,6 +58,7 @@ struct SettingsView: View {
                     Section(header: Text("Display Options")){
                         DisplayOptions(displayOption: displayOption[0])
                         DisplayOptions(displayOption: displayOption[1])
+                        
                         DisplayOptions(displayOption: displayOption[2])
                     }
                 }
