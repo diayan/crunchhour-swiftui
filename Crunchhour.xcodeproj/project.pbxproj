@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		B21D4004263AD2C100A4E779 /* WeightView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B21D4003263AD2C100A4E779 /* WeightView.swift */; };
 		B21D4008263AD2D300A4E779 /* LogWeight.swift in Sources */ = {isa = PBXBuildFile; fileRef = B21D4007263AD2D300A4E779 /* LogWeight.swift */; };
+		B21D400B263B1E8500A4E779 /* ProgressViewExample.swift in Sources */ = {isa = PBXBuildFile; fileRef = B21D400A263B1E8500A4E779 /* ProgressViewExample.swift */; };
 		B234C2C92632EDA500DF71D8 /* EmojiFeeling.swift in Sources */ = {isa = PBXBuildFile; fileRef = B234C2C82632EDA500DF71D8 /* EmojiFeeling.swift */; };
 		B234C2CC2632F61700DF71D8 /* EmojiView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B234C2CB2632F61700DF71D8 /* EmojiView.swift */; };
 		B2359B9D2608C5EE00BC3777 /* CrunchWindowCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2359B9C2608C5EE00BC3777 /* CrunchWindowCard.swift */; };
@@ -42,6 +43,7 @@
 /* Begin PBXFileReference section */
 		B21D4003263AD2C100A4E779 /* WeightView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeightView.swift; sourceTree = "<group>"; };
 		B21D4007263AD2D300A4E779 /* LogWeight.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogWeight.swift; sourceTree = "<group>"; };
+		B21D400A263B1E8500A4E779 /* ProgressViewExample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressViewExample.swift; sourceTree = "<group>"; };
 		B234C2C82632EDA500DF71D8 /* EmojiFeeling.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmojiFeeling.swift; sourceTree = "<group>"; };
 		B234C2CB2632F61700DF71D8 /* EmojiView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmojiView.swift; sourceTree = "<group>"; };
 		B2359B9C2608C5EE00BC3777 /* CrunchWindowCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CrunchWindowCard.swift; sourceTree = "<group>"; };
@@ -90,6 +92,7 @@
 			children = (
 				B21D4003263AD2C100A4E779 /* WeightView.swift */,
 				B21D4007263AD2D300A4E779 /* LogWeight.swift */,
+				B21D400A263B1E8500A4E779 /* ProgressViewExample.swift */,
 			);
 			path = WeightLogs;
 			sourceTree = "<group>";
@@ -309,6 +312,7 @@
 				B2359BA02608C66C00BC3777 /* CrunchNoteCard.swift in Sources */,
 				B234C2C92632EDA500DF71D8 /* EmojiFeeling.swift in Sources */,
 				B2A6AD5526397B9C0021631C /* ImagePickerView.swift in Sources */,
+				B21D400B263B1E8500A4E779 /* ProgressViewExample.swift in Sources */,
 				B284454D262F017C0073E68B /* CameraModel.swift in Sources */,
 				B21D4004263AD2C100A4E779 /* WeightView.swift in Sources */,
 				B2844542262DDB580073E68B /* DisplayOptionsModel.swift in Sources */,

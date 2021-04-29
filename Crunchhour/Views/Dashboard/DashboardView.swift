@@ -11,7 +11,7 @@ struct DashboardView: View {
     @State private var showSettings = false
 
     var body: some View {
-        return ZStack() {
+        return ZStack {
             NavigationView {
                 ScrollView(showsIndicators: false) {
                     LazyVStack {
