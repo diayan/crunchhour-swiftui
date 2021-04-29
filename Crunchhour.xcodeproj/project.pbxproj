@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B21D4004263AD2C100A4E779 /* WeightView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B21D4003263AD2C100A4E779 /* WeightView.swift */; };
+		B21D4008263AD2D300A4E779 /* LogWeight.swift in Sources */ = {isa = PBXBuildFile; fileRef = B21D4007263AD2D300A4E779 /* LogWeight.swift */; };
 		B234C2C92632EDA500DF71D8 /* EmojiFeeling.swift in Sources */ = {isa = PBXBuildFile; fileRef = B234C2C82632EDA500DF71D8 /* EmojiFeeling.swift */; };
 		B234C2CC2632F61700DF71D8 /* EmojiView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B234C2CB2632F61700DF71D8 /* EmojiView.swift */; };
 		B2359B9D2608C5EE00BC3777 /* CrunchWindowCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2359B9C2608C5EE00BC3777 /* CrunchWindowCard.swift */; };
@@ -16,7 +18,6 @@
 		B2359BAF260AA32600BC3777 /* RecentEatingCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2359BAE260AA32600BC3777 /* RecentEatingCard.swift */; };
 		B239E1B72611F5D80077A1D4 /* CircularProgress.swift in Sources */ = {isa = PBXBuildFile; fileRef = B239E1B62611F5D80077A1D4 /* CircularProgress.swift */; };
 		B239E1BE26122B350077A1D4 /* CloseWindowEditor.swift in Sources */ = {isa = PBXBuildFile; fileRef = B239E1BD26122B350077A1D4 /* CloseWindowEditor.swift */; };
-		B244267D262598FD00310ABA /* PickerTest .swift in Sources */ = {isa = PBXBuildFile; fileRef = B244267C262598FD00310ABA /* PickerTest .swift */; };
 		B24426802627496600310ABA /* SectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B244267F2627496500310ABA /* SectionView.swift */; };
 		B2483E7D262869CD00FB8C66 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2483E7C262869CD00FB8C66 /* SettingsView.swift */; };
 		B2483E8526286FFC00FB8C66 /* SettingSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2483E8426286FFC00FB8C66 /* SettingSection.swift */; };
@@ -39,6 +40,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		B21D4003263AD2C100A4E779 /* WeightView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeightView.swift; sourceTree = "<group>"; };
+		B21D4007263AD2D300A4E779 /* LogWeight.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogWeight.swift; sourceTree = "<group>"; };
 		B234C2C82632EDA500DF71D8 /* EmojiFeeling.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmojiFeeling.swift; sourceTree = "<group>"; };
 		B234C2CB2632F61700DF71D8 /* EmojiView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmojiView.swift; sourceTree = "<group>"; };
 		B2359B9C2608C5EE00BC3777 /* CrunchWindowCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CrunchWindowCard.swift; sourceTree = "<group>"; };
@@ -48,7 +51,6 @@
 		B2359BAE260AA32600BC3777 /* RecentEatingCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecentEatingCard.swift; sourceTree = "<group>"; };
 		B239E1B62611F5D80077A1D4 /* CircularProgress.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircularProgress.swift; sourceTree = "<group>"; };
 		B239E1BD26122B350077A1D4 /* CloseWindowEditor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CloseWindowEditor.swift; sourceTree = "<group>"; };
-		B244267C262598FD00310ABA /* PickerTest .swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PickerTest .swift"; sourceTree = "<group>"; };
 		B244267F2627496500310ABA /* SectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionView.swift; sourceTree = "<group>"; };
 		B2483E7C262869CD00FB8C66 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		B2483E8426286FFC00FB8C66 /* SettingSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingSection.swift; sourceTree = "<group>"; };
@@ -83,6 +85,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		B21D3FFD263AD28700A4E779 /* WeightLogs */ = {
+			isa = PBXGroup;
+			children = (
+				B21D4003263AD2C100A4E779 /* WeightView.swift */,
+				B21D4007263AD2D300A4E779 /* LogWeight.swift */,
+			);
+			path = WeightLogs;
+			sourceTree = "<group>";
+		};
 		B234C2CE2632F62200DF71D8 /* HelperViews */ = {
 			isa = PBXGroup;
 			children = (
@@ -102,7 +113,6 @@
 				B2359BAA26091C8200BC3777 /* RecentEatingCardItem.swift */,
 				B2359BAE260AA32600BC3777 /* RecentEatingCard.swift */,
 				B239E1B62611F5D80077A1D4 /* CircularProgress.swift */,
-				B244267C262598FD00310ABA /* PickerTest .swift */,
 			);
 			path = Dashboard;
 			sourceTree = "<group>";
@@ -137,6 +147,7 @@
 				B239E1C026122B3D0077A1D4 /* CloseWindow */,
 				B2483E8026286F7B00FB8C66 /* Settings */,
 				B27940DD2636A40200C82251 /* Graphs */,
+				B21D3FFD263AD28700A4E779 /* WeightLogs */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -299,6 +310,7 @@
 				B234C2C92632EDA500DF71D8 /* EmojiFeeling.swift in Sources */,
 				B2A6AD5526397B9C0021631C /* ImagePickerView.swift in Sources */,
 				B284454D262F017C0073E68B /* CameraModel.swift in Sources */,
+				B21D4004263AD2C100A4E779 /* WeightView.swift in Sources */,
 				B2844542262DDB580073E68B /* DisplayOptionsModel.swift in Sources */,
 				B2359BA7260900B700BC3777 /* DashboardView.swift in Sources */,
 				B26E2F142608084600561217 /* CountdownProgress.swift in Sources */,
@@ -308,11 +320,11 @@
 				B24426802627496600310ABA /* SectionView.swift in Sources */,
 				B29C39A8262075D500F16FA1 /* ScheduleView.swift in Sources */,
 				B2359BAF260AA32600BC3777 /* RecentEatingCard.swift in Sources */,
+				B21D4008263AD2D300A4E779 /* LogWeight.swift in Sources */,
 				B2483E8526286FFC00FB8C66 /* SettingSection.swift in Sources */,
 				B2844545262DE8290073E68B /* EndFastView.swift in Sources */,
 				B2A6AD5226397B060021631C /* ImageDataCoordinator.swift in Sources */,
 				B239E1B72611F5D80077A1D4 /* CircularProgress.swift in Sources */,
-				B244267D262598FD00310ABA /* PickerTest .swift in Sources */,
 				B234C2CC2632F61700DF71D8 /* EmojiView.swift in Sources */,
 				B239E1BE26122B350077A1D4 /* CloseWindowEditor.swift in Sources */,
 				B27940D82636A31300C82251 /* GraphCapsule.swift in Sources */,

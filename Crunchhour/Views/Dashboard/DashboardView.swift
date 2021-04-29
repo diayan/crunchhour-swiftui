@@ -75,17 +75,18 @@ struct DashboardView: View {
                 }
                 .navigationBarTitle(
                     Text("Dashboard"))
+                
                 .navigationBarItems(leading: Button(action: {
                     
                 }, label: {
                     Text("About")
-                        .foregroundColor(.blue)
+                        .foregroundColor(Color(.systemRed))
                 }).font(Font.system(size: 16, weight: .semibold, design: .rounded)),
                 trailing: Button(action: {
                     self.showSettings.toggle()
                 }, label: {
                     Image(systemName: "gearshape")
-                        .foregroundColor(.blue)
+                        .foregroundColor(Color(.systemRed))
                 }).font(Font.system(size: 20, weight: .semibold, design: .rounded)).fullScreenCover(isPresented: $showSettings, content: {
                     SettingsView(schedule: Schedule(day: .Monday, duration: "3 hrs", startTime: Date()))
                 }))

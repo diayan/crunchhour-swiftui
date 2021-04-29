@@ -12,8 +12,6 @@ struct CrunchNoteCard: View {
     var body: some View {
         VStack {
             HStack(alignment: .center){
-                CountdownProgress()
-                    .frame(width: 80, height: 80, alignment: .center)
                 VStack(alignment: .leading) {
                     Text("Monday, March 22")
                         .bold()
@@ -25,7 +23,8 @@ struct CrunchNoteCard: View {
                         .foregroundColor(.secondary)
                         .bold()
                     
-                }
+                }.padding()
+                
                 Spacer()
                 
                 Image("testimage").resizable()
@@ -38,7 +37,8 @@ struct CrunchNoteCard: View {
             
             Text("For dinner, I had a BBQ chicken with pasta in a creamy mushroom sauce and salad with italian dressing for. For desert, I had a full cup of icecream :)")
                 .foregroundColor(.secondary)
-                .padding()
+                .padding(.top, 4)
+            
             VStack(spacing: 0) {
                 Divider()
                 HStack {
@@ -47,6 +47,7 @@ struct CrunchNoteCard: View {
                     }, label: {
                         Text("Edit Note")
                             .bold()
+                            .foregroundColor(Color(.systemRed))
                             .fixedSize()
 
                     }).padding()
