@@ -8,43 +8,25 @@
 import SwiftUI
 
 struct ContentView: View {
+    @State private var selection: Tab = .dashboard
+
+    enum Tab {
+        case dashboard
+        case weight
+    }
+    
     var body: some View {
-        return VStack() {
-            NavigationView {
-                ScrollView {
-                    HStack {
-                        Text("Current Eating Window")
-                            .foregroundColor(.secondary)
-                            .bold()
-                            .font(.subheadline)
-                            .padding(.top)
-                            .padding(.leading, 20)
-                            .padding(.trailing, 20)
-                            .padding(.bottom, 8)
-                        Spacer()
-                    }
-                    
-                    Spacer()
-
-                    CrunchWindowCard()
-                    
-                    HStack {
-                        Text("Today's Note")
-                            .foregroundColor(.secondary)
-                            .bold()
-                            .font(.subheadline)
-                            .padding(.top)
-                            .padding(.leading, 20)
-                            .padding(.trailing, 20)
-                            .padding(.bottom, 8)
-                        Spacer()
-                    }
-
-                    CrunchNoteCard()
-                }.background(Color("background"))
-                .navigationBarTitle(
-                    Text("Dashboard"))
-            }
+        TabView(selection: $selection) {
+            DashboardView()
+                .tabItem {
+                    Label("Home", systemImage: "rectangle.3.offgrid")
+                }
+                .tag(Tab.dashboard)
+            
+            WeightView()
+                .tabItem {
+                    Label("Weight", systemImage: "staroflife")
+                }.tag(Tab.weight)
         }
     }
 }

@@ -106,7 +106,7 @@ struct EndFastView: View {
                     
                     ZStack {
                         if selectedImage != nil  {
-                    
+                            
                             GeometryReader { geo in
                                 Image(uiImage: selectedImage!).resizable()
                                     .aspectRatio(contentMode: .fill)
@@ -121,38 +121,38 @@ struct EndFastView: View {
                             Button(action: {
                                 showingSheet.toggle()
                             }, label: {
-                                         HStack {
-                                             Image(systemName: "camera")
-                                             Text("Share your fast breaker")
-                                         }
-                                         .frame(minWidth: 0, maxWidth: .infinity)
-                                         .padding()
-                                         .foregroundColor(.red)
-                                         .background(Color.white)
-                                         .cornerRadius(40)
-                                     }).actionSheet(isPresented: $showingSheet) {
-                                        ActionSheet(
-                                            title: Text("Share your breaker")
-                                                .font(.title)
-                                                .foregroundColor(.primary)
-                                                .font(.system(size: 24)),
-                                            message: Text(""),
-                                            buttons: [
-                                                .default(Text("Take a picture")){
-                                                    self.sourceType = .camera
-                                                    self.isImagePickerDisplay.toggle()
-                                                },
-                                                .default(Text("Open Gallery")){
-                                                    self.sourceType = .photoLibrary
-                                                    self.isImagePickerDisplay.toggle()
-                                                },
-                                                .cancel()
-                                            ]
-                                        )
-                                    }
+                                HStack {
+                                    Image(systemName: "camera")
+                                    Text("Share your fast breaker")
+                                }
+                                .frame(minWidth: 0, maxWidth: .infinity)
+                                .padding()
+                                .foregroundColor(.red)
+                                .background(Color.white)
+                                .cornerRadius(40)
+                            }).actionSheet(isPresented: $showingSheet) {
+                                ActionSheet(
+                                    title: Text("Share your breaker")
+                                        .font(.title)
+                                        .foregroundColor(.primary)
+                                        .font(.system(size: 24)),
+                                    message: Text(""),
+                                    buttons: [
+                                        .default(Text("Take a picture")){
+                                            self.sourceType = .camera
+                                            self.isImagePickerDisplay.toggle()
+                                        },
+                                        .default(Text("Open Gallery")){
+                                            self.sourceType = .photoLibrary
+                                            self.isImagePickerDisplay.toggle()
+                                        },
+                                        .cancel()
+                                    ]
+                                )
+                            }
                         }
                     }.padding(.top)
-                                        
+                    
                     Group {
                         HStack {
                             Text("Add a note")

@@ -11,7 +11,7 @@ struct DashboardView: View {
     @State private var showSettings = false
 
     var body: some View {
-        return ZStack() {
+        return ZStack {
             NavigationView {
                 ScrollView(showsIndicators: false) {
                     LazyVStack {
@@ -32,7 +32,7 @@ struct DashboardView: View {
                         CrunchWindowCard()
                         
                         HStack {
-                            Text("Today's Note")
+                            Text("Recent Note")
                                 .foregroundColor(.secondary)
                                 .bold()
                                 .font(.subheadline)
@@ -46,7 +46,7 @@ struct DashboardView: View {
                         CrunchNoteCard()
                         
                         HStack {
-                            Text("Recent Eatings")
+                            Text("Recent Fast")
                                 .foregroundColor(.secondary)
                                 .bold()
                                 .font(.subheadline)
@@ -57,7 +57,7 @@ struct DashboardView: View {
                             Spacer()
                         }
                         
-                        RecentEatingCard()
+                        FastingGraph()
                         
                         HStack {
                             Text("Previous Fasting")
@@ -71,21 +71,22 @@ struct DashboardView: View {
                             Spacer()
                         }
                     }
-                    .background(Color("background"))
+                    .background(Color("foreground"))
                 }
                 .navigationBarTitle(
                     Text("Dashboard"))
+                
                 .navigationBarItems(leading: Button(action: {
                     
                 }, label: {
                     Text("About")
-                        .foregroundColor(.blue)
+                        .foregroundColor(Color(.systemRed))
                 }).font(Font.system(size: 16, weight: .semibold, design: .rounded)),
                 trailing: Button(action: {
                     self.showSettings.toggle()
                 }, label: {
                     Image(systemName: "gearshape")
-                        .foregroundColor(.blue)
+                        .foregroundColor(Color(.systemRed))
                 }).font(Font.system(size: 20, weight: .semibold, design: .rounded)).fullScreenCover(isPresented: $showSettings, content: {
                     SettingsView(schedule: Schedule(day: .Monday, duration: "3 hrs", startTime: Date()))
                 }))

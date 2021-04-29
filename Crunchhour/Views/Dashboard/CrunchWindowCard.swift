@@ -12,7 +12,8 @@ struct CrunchWindowCard: View {
    // @Environment(.\presentationMode) var presentationMode
     @State private var showCloseWindowForm = false
     @State private var showDatePicker      = false
-    @State private var startDate = Date()
+    @State private var startDate           = Date()
+    @State private var endDate             = Date()
     
     var body: some View {
         VStack {
@@ -20,40 +21,48 @@ struct CrunchWindowCard: View {
             HStack(alignment: .top){
                 VStack(alignment: .leading) {
                     Text("Your five hour window \n opened at 4:00pm")
+                        .bold()
                         .fixedSize(horizontal: false, vertical: true)
-                        .font(.headline)
-                        .foregroundColor(.primary)
-                    Text("Closses in 3h 30mins")
+                        .font(.title2)
+                        .foregroundColor(Color(.systemRed))
+                    
+                    Text("Closses in 3h 30 mins")
                         .foregroundColor(.black)
-                        .font(.title)
-                }.padding()
-                
+                        .font(.body)
+                        .padding(.top, 4)
+                }
                 Spacer()
                 
                 CountdownProgress()
-                    .frame(width: 80, height: 80, alignment: .center)
+                    .frame(width: 100, height: 100, alignment: .center)
             }.padding()
+            .padding(.top, 8)
             
+            Group {
+                DatePicker(selection: $startDate, displayedComponents: [.hourAndMinute]){
+                    Text("Start Time")
+                        .bold()
+                }
+                
+                DatePicker(selection: $endDate, displayedComponents: [.hourAndMinute]) {
+                    Text("End Time")
+                        .bold()
+                }
+            }.padding(.leading)
+            .padding(.trailing)
+            .padding(.bottom, 8)
+            .padding(.top, 8)
+
             VStack(spacing: 0) {
-                
                 Divider()
+
                 
-                HStack {
-                    Button(action: {
-                        self.showDatePicker.toggle()
-                    }) {
-                        Text("Edit")
-                            .bold()
-                            .fixedSize()
-                    }.padding()
-                    .frame(maxWidth: .infinity)
-                    
-                    Divider()
-                    
+                HStack() {
                     Button(action: {
                         self.showCloseWindowForm.toggle()
                     }, label: {
                         Text("Close Window")
+                            .foregroundColor(Color(.systemRed))
                             .bold()
                             .fixedSize()
                     })
@@ -64,8 +73,8 @@ struct CrunchWindowCard: View {
                     .frame(maxWidth: .infinity)
                 }.fixedSize(horizontal: false, vertical: true)
             }
-        }.frame( height:200)
-        .background(Color("foreground"))
+        }.frame( height:320)
+        .background(Color(.white))
         .cornerRadius(15)
         .padding(.leading)
         .padding(.trailing)
