@@ -41,11 +41,10 @@ struct FastingGraph: View {
                 }.padding(.top, 24)
                 .animation(.default)
                 
-            }.frame(height: 320)
+            }.frame(height: 340)
             .background(Color(#colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)))
             .cornerRadius(15)
-            .padding(.leading)
-            .padding(.trailing)
+            .padding()
         }
     }
 }
