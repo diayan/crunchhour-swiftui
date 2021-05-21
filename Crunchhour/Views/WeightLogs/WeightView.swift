@@ -7,10 +7,19 @@
 
 import SwiftUI
 
+enum ActiveSheet: Identifiable {
+    case first, second
+    var id: Int {
+        hashValue
+    }
+}
+
 struct WeightView: View {
     @Environment(\.presentationMode) private var dismissModal
     @State private var isWeightListShow = false
-
+    @State private var isAddNewWeight   = false
+    @State var activeSheet: ActiveSheet?
+    
     var body: some View {
         return ZStack {
             NavigationView {
@@ -81,9 +90,7 @@ struct WeightView: View {
                                     
                                 }
                                 Spacer()
-                                
                                 VStack(alignment: .center) {
-                                    
                                     Text("Left")
                                         .font(.caption)
                                         .foregroundColor(.secondary)
@@ -95,9 +102,7 @@ struct WeightView: View {
                                         + Text(" kg")
                                         .bold()
                                 }
-                                
                                 Spacer()
-                                
                                 VStack(alignment: .trailing) {
                                     Text("Target")
                                         .font(.caption)
@@ -118,16 +123,47 @@ struct WeightView: View {
                                 .progressViewStyle(DarkBlueShadowProgressViewStyle())
                         }.frame(height: 100, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
                         .padding()
+                        .cornerRadius(8)
+                        
+                        
+                        HStack {
+                            Button(action: /*@START_MENU_TOKEN@*/{}/*@END_MENU_TOKEN@*/, label: {
+                                Text("Edit Weight")
+                                    .bold()
+                            }) 
+                            .padding()
+                            .frame(height: 40, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
+                            .foregroundColor(.white)
+                            .background(Color.green)
+                            .cornerRadius(25)
+                        }.padding()
+                        
                     }.background(Color("foreground"))
                 }.background(Color("foreground"))
                 .navigationBarTitle(
                     Text("My Weight"))
-                .navigationBarItems(trailing: Button(action: {
-                    self.isWeightListShow.toggle()
-                }, label: {
-                    Image(uiImage: UIImage(systemName: "list.bullet")!)
-                })).sheet(isPresented: self.$isWeightListShow) {
-                    WeightListView()
+                .navigationBarItems(trailing: HStack(spacing: 30) {
+                    Button(action: {
+                        activeSheet = .first
+                    }, label: {
+                        Image(systemName: "plus")
+                            .foregroundColor(Color(.systemRed))
+                    })
+                    Button(action: {
+                        activeSheet = .second
+                    }, label: {
+                        Image(systemName: "list.bullet")
+                            .foregroundColor(Color(.systemRed))
+                        
+                    })
+                }).fullScreenCover(item: $activeSheet) { item in
+                    switch item {
+                    case .first:
+                        AddWeightView()
+                    case .second:
+                        WeightListView()
+
+                    }
                 }
             }
         }
@@ -139,7 +175,6 @@ struct DarkBlueShadowProgressViewStyle: ProgressViewStyle {
         ProgressView(configuration)
             .shadow(color: Color(red: 0, green: 0.6, blue: 0),
                     radius: 8.0, x: 1.0, y: 2.0)
-        
     }
 }
 

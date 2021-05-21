@@ -45,7 +45,8 @@ struct FastingGraph: View {
             .background(Color(#colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)))
             .cornerRadius(15)
             .padding()
-        }
+        }.shadow(color: Color.black, radius: 0, x: 0.0 , y: 0.2)
+
     }
 }
 
