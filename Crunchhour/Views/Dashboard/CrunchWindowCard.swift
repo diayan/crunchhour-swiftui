@@ -9,7 +9,7 @@ import SwiftUI
 import Foundation
 
 struct CrunchWindowCard: View {
-   // @Environment(.\presentationMode) var presentationMode
+    // @Environment(.\presentationMode) var presentationMode
     @State private var showCloseWindowForm = false
     @State private var showDatePicker      = false
     @State private var startDate           = Date()
@@ -17,46 +17,35 @@ struct CrunchWindowCard: View {
     
     var body: some View {
         VStack {
-            
-            HStack(alignment: .top){
+            HStack{
                 VStack(alignment: .leading) {
-                    Text("Your five hour window \n opened at 4:00pm")
+                    Text("Your five hour window \nopened at 4:00pm")
                         .bold()
                         .fixedSize(horizontal: false, vertical: true)
-                        .font(.title2)
+                        .font(.title3)
                         .foregroundColor(Color(.systemRed))
                     
-                    Text("Closses in 3h 30 mins")
+                    Text("Closes in 3h 30 mins")
                         .foregroundColor(.black)
-                        .font(.body)
+                        .font(.caption)
                         .padding(.top, 4)
                 }
                 Spacer()
-                
                 CountdownProgress()
-                    .frame(width: 100, height: 100, alignment: .center)
-            }.padding()
-            .padding(.top, 8)
-            
+            }
+            .padding(.bottom, 16)
             Group {
                 DatePicker(selection: $startDate, displayedComponents: [.hourAndMinute]){
                     Text("Start Time")
-                        .bold()
-                }
+                }.accentColor(.red)
                 
                 DatePicker(selection: $endDate, displayedComponents: [.hourAndMinute]) {
                     Text("End Time")
-                        .bold()
-                }
-            }.padding(.leading)
-            .padding(.trailing)
-            .padding(.bottom, 8)
-            .padding(.top, 8)
-
+                }.accentColor(.red)
+            }
+            
             VStack(spacing: 0) {
                 Divider()
-
-                
                 HStack() {
                     Button(action: {
                         self.showCloseWindowForm.toggle()
@@ -73,11 +62,9 @@ struct CrunchWindowCard: View {
                     .frame(maxWidth: .infinity)
                 }.fixedSize(horizontal: false, vertical: true)
             }
-        }.frame( height:320)
+        }.padding()
         .background(Color(.white))
         .cornerRadius(15)
-        .padding(.leading)
-        .padding(.trailing)
         .shadow(color: Color.black, radius: 0, x: 0.0 , y: 0.2)
     }    
 }
@@ -85,5 +72,6 @@ struct CrunchWindowCard: View {
 struct CrunchWindowCard_Previews: PreviewProvider {
     static var previews: some View {
         CrunchWindowCard()
+            .previewLayout(.sizeThatFits)
     }
 }

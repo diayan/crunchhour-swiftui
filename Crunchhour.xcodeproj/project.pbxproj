@@ -145,8 +145,8 @@
 		B2634717260898E300F7DFB6 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				B27940D426369E5700C82251 /* Timeline */,
 				B2AAF1F82604CAC800E6C4C6 /* ContentView.swift */,
+				B27940D426369E5700C82251 /* Timeline */,
 				B234C2CE2632F62200DF71D8 /* HelperViews */,
 				B29C398E2620721F00F16FA1 /* Schedules */,
 				B2359BA52609009500BC3777 /* Dashboard */,

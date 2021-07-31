@@ -14,30 +14,24 @@ struct CrunchNoteCard: View {
             HStack(alignment: .center){
                 VStack(alignment: .leading) {
                     Text("Monday, March 22")
-                        .bold()
                         .fixedSize(horizontal: false, vertical: true)
-                        .font(.title2)
+                        .font(.headline)
                     
                     Text("4:00pm - 9:01pm")
-                        .font(.title3)
+                        .font(.caption)
                         .foregroundColor(.secondary)
-                        .bold()
-                    
-                }.padding()
-                
+                }
                 Spacer()
-                
                 Image("testimage").resizable()
                     .aspectRatio(contentMode: .fill)
                     .frame(width: 60, height: 60, alignment: .center)
                     .clipped()
                     .cornerRadius(20)
-                    .padding(.trailing)
             }
             
             Text("For dinner, I had a BBQ chicken with pasta in a creamy mushroom sauce and salad with italian dressing for. For desert, I had a full cup of icecream :)")
+                .font(.body)
                 .foregroundColor(.secondary)
-                .padding(.top, 4)
             
             VStack(spacing: 0) {
                 Divider()
@@ -49,7 +43,7 @@ struct CrunchNoteCard: View {
                             .bold()
                             .foregroundColor(Color(.systemRed))
                             .fixedSize()
-
+                        
                     }).padding()
                     .frame(maxWidth: .infinity)
                     .fullScreenCover(isPresented: $editNote, content: {
@@ -58,10 +52,9 @@ struct CrunchNoteCard: View {
                 }
             }
         }
+        .padding()
         .background(Color(.white))
         .cornerRadius(15)
-        .padding(.leading)
-        .padding(.trailing)
         .shadow(color: Color.black, radius: 0, x: 0.0 , y: 0.2)
     }
 }
@@ -77,6 +70,6 @@ struct CrunchNoteHeader: View {
 }
 struct CrunchNoteCard_Previews: PreviewProvider {
     static var previews: some View {
-        CrunchNoteCard()
+        CrunchNoteCard().previewLayout(.sizeThatFits)
     }
 }

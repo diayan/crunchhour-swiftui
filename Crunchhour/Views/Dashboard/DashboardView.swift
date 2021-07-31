@@ -9,7 +9,8 @@ import SwiftUI
 
 struct DashboardView: View {
     @State private var showSettings = false
-
+    @State private var startFast    = false
+    
     var body: some View {
         return ZStack {
             NavigationView {
@@ -21,74 +22,61 @@ struct DashboardView: View {
                                 .bold()
                                 .font(.subheadline)
                                 .padding(.top)
-                                .padding(.leading, 20)
-                                .padding(.trailing, 20)
-                                .padding(.bottom, 8)
+                                .padding(.bottom)
                             Spacer()
                         }
-                        
                         Spacer()
-                        
                         CrunchWindowCard()
-                        
                         HStack {
                             Text("Recent Note")
                                 .foregroundColor(.secondary)
                                 .bold()
                                 .font(.subheadline)
                                 .padding(.top)
-                                .padding(.leading, 20)
-                                .padding(.trailing, 20)
-                                .padding(.bottom, 8)
+                                .padding(.bottom)
                             Spacer()
                         }
-                        
                         CrunchNoteCard()
-                        
                         HStack {
                             Text("Recent Fast")
                                 .foregroundColor(.secondary)
                                 .bold()
                                 .font(.subheadline)
                                 .padding(.top)
-                                .padding(.leading, 20)
-                                .padding(.trailing, 20)
-                                .padding(.bottom, 8)
+                                .padding(.bottom)
                             Spacer()
                         }
-                        
                         FastingGraph()
-                        
                         HStack {
                             Text("Previous Fasting")
                                 .foregroundColor(.secondary)
                                 .bold()
                                 .font(.subheadline)
                                 .padding(.top)
-                                .padding(.leading, 20)
-                                .padding(.trailing, 20)
                                 .padding(.bottom, 8)
                             Spacer()
                         }
-                    }
+                    }.padding()
                     .background(Color("foreground"))
                 }
                 .navigationBarTitle(
                     Text("Dashboard"))
                 
                 .navigationBarItems(leading: Button(action: {
-                    
-                }, label: {
-                    Text("About")
-                        .foregroundColor(Color(.systemRed))
-                }).font(Font.system(size: 16, weight: .semibold, design: .rounded)),
-                trailing: Button(action: {
                     self.showSettings.toggle()
                 }, label: {
                     Image(systemName: "gearshape")
                         .foregroundColor(Color(.systemRed))
                 }).font(Font.system(size: 20, weight: .semibold, design: .rounded)).fullScreenCover(isPresented: $showSettings, content: {
                     SettingsView(schedule: Schedule(day: .Monday, duration: "3 hrs", startTime: Date()))
+                }),
+                trailing: Button(action: {
+                    self.startFast.toggle()
+                }, label: {
+                    Image(systemName: "plus")
+                        .foregroundColor(Color(.systemRed))
+                }).font(Font.system(size: 20, weight: .semibold, design: .rounded)).fullScreenCover(isPresented: $startFast, content: {
+                    
                 }))
             }
         }

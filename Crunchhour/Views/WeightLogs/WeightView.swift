@@ -8,7 +8,7 @@
 import SwiftUI
 
 enum ActiveSheet: Identifiable {
-    case first, second
+    case first, second, third
     var id: Int {
         hashValue
     }
@@ -16,8 +16,7 @@ enum ActiveSheet: Identifiable {
 
 struct WeightView: View {
     @Environment(\.presentationMode) private var dismissModal
-    @State private var isWeightListShow = false
-    @State private var isAddNewWeight   = false
+    @State private var isEditWeight = false
     @State var activeSheet: ActiveSheet?
     
     var body: some View {
@@ -28,51 +27,41 @@ struct WeightView: View {
                         Group {
                             HStack {
                                 VStack(alignment: .leading) {
-                                    Text("CURRENT WEIGHT")
-                                        .foregroundColor(.black)
+                                    Text("Current Weight")
+                                        .foregroundColor(.red)
                                         .font(.caption)
-                                        .bold()
-                                    
                                     Spacer(minLength: 2)
-                                    
                                     Text("64")
                                         .font(.title)
                                         .bold()
-                                        
                                         + Text(" kg")
                                         .font(.title)
                                         .bold()
                                 }
-                                
                                 Spacer()
-                                
                                 VStack(alignment: .leading) {
-                                    Text("WEIGHT GOAL")
-                                        .foregroundColor(.black)
+                                    Text("Weight Goal")
+                                        .foregroundColor(.red)
                                         .font(.caption)
-                                        .bold()
-                                    
                                     Text("70")
                                         .font(.title)
                                         .bold()
-                                        
                                         + Text(" kg")
                                         .font(.title)
                                         .bold()
                                 }
-                            }.padding()
+                            }
                         }
-                        
                         FastingGraph()
-                        
                         HStack {
                             Text("Your Progress")
-                                .font(.title)
+                                .foregroundColor(.red)
+                                .font(.title2)
                                 .bold()
                             Spacer()
-                        }.padding(.leading)
-                        .padding(.trailing)
-                        
+                        }.padding(.top)
+                        .padding(.bottom)
+        
                         VStack {
                             //Color("colorgreen")
                             HStack {
@@ -122,15 +111,15 @@ struct WeightView: View {
                                 .accentColor(Color(.systemGreen))
                                 .progressViewStyle(DarkBlueShadowProgressViewStyle())
                         }.frame(height: 100, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
-                        .padding()
                         .cornerRadius(8)
                         
-                        
                         HStack {
-                            Button(action: /*@START_MENU_TOKEN@*/{}/*@END_MENU_TOKEN@*/, label: {
+                            Button(action: {
+                                activeSheet = .third
+                            }, label: {
                                 Text("Edit Weight")
                                     .bold()
-                            }) 
+                            })
                             .padding()
                             .frame(height: 40, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
                             .foregroundColor(.white)
@@ -139,6 +128,7 @@ struct WeightView: View {
                         }.padding()
                         
                     }.background(Color("foreground"))
+                    .padding()
                 }.background(Color("foreground"))
                 .navigationBarTitle(
                     Text("My Weight"))
@@ -154,7 +144,6 @@ struct WeightView: View {
                     }, label: {
                         Image(systemName: "list.bullet")
                             .foregroundColor(Color(.systemRed))
-                        
                     })
                 }).fullScreenCover(item: $activeSheet) { item in
                     switch item {
@@ -162,7 +151,8 @@ struct WeightView: View {
                         AddWeightView()
                     case .second:
                         WeightListView()
-
+                    case .third:
+                        WeightListView()
                     }
                 }
             }

@@ -14,13 +14,13 @@ struct CountdownProgress: View {
             ZStack {
                 Circle()
                     .trim(from: 0, to: 1)
-                    .stroke(Color.green.opacity(0.09), style: StrokeStyle(lineWidth: 20, lineCap: .round))
-                    .frame(width: 100, height: 100)
+                    .stroke(Color.green.opacity(0.09), style: StrokeStyle(lineWidth: 16, lineCap: .round))
+                    .frame(width: 80, height: 80)
                 
                 Circle()
                     .trim(from: 0, to: 0.5)
-                    .stroke(Color.green, style: StrokeStyle(lineWidth: 20, lineCap: .round))
-                    .frame(width: 100, height: 100)
+                    .stroke(Color.green, style: StrokeStyle(lineWidth: 12, lineCap: .round))
+                    .frame(width: 80, height: 80)
             }.rotationEffect(.init(degrees: -90))
         }
     }

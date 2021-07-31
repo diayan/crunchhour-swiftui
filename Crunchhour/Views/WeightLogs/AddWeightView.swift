@@ -11,25 +11,32 @@ struct AddWeightView: View {
     @Environment(\.presentationMode) private var dismissModal
     @State private var date           = Date()
 
+    init() {
+        UIDatePicker.appearance().tintColor = UIColor.init(Color(.red)) // changes text color
+    }
+    
     var body: some View {
         NavigationView {
             ScrollView {
-                DatePicker(selection: $date, displayedComponents: .date, label: {
-                    Text("Date").bold()
-                }).padding(.top)
-                
-                Divider()
                 
                 HStack {
                     Text("Username")
                         .bold()
-                    
                     Spacer()
                     
                     Text("105kg")
-                }
-                                
+                        .bold()
+                }.padding(.top)
+
+                
+                Divider()
+
+                DatePicker(selection: $date, displayedComponents: .date, label: {
+                    Text("Date").bold()
+                })
+    
             }.padding()
+            .background(Color("foreground"))
             .navigationBarTitle(Text("Weight Log "), displayMode: .inline)
             .navigationBarItems(leading: Button(action: {
                 self.dismissModal.wrappedValue.dismiss()
