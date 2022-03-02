@@ -15,12 +15,12 @@ struct CountdownProgress: View {
                 Circle()
                     .trim(from: 0, to: 1)
                     .stroke(Color.green.opacity(0.09), style: StrokeStyle(lineWidth: 16, lineCap: .round))
-                    .frame(width: 80, height: 80)
+                    .frame(width: 80, height: 60)
                 
                 Circle()
                     .trim(from: 0, to: 0.5)
                     .stroke(Color.green, style: StrokeStyle(lineWidth: 12, lineCap: .round))
-                    .frame(width: 80, height: 80)
+                    .frame(width: 80, height: 60)
             }.rotationEffect(.init(degrees: -90))
         }
     }

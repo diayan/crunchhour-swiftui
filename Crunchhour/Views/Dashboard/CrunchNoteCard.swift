@@ -53,7 +53,7 @@ struct CrunchNoteCard: View {
             }
         }
         .padding()
-        .background(Color(.white))
+        .background(Color(.systemBackground))
         .cornerRadius(15)
         .shadow(color: Color.black, radius: 0, x: 0.0 , y: 0.2)
     }
