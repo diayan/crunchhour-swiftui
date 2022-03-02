@@ -28,7 +28,6 @@ struct AddWeightView: View {
                         .bold()
                 }.padding(.top)
 
-                
                 Divider()
 
                 DatePicker(selection: $date, displayedComponents: .date, label: {
@@ -41,7 +40,8 @@ struct AddWeightView: View {
             .navigationBarItems(leading: Button(action: {
                 self.dismissModal.wrappedValue.dismiss()
             }, label: {
-                Image(uiImage: UIImage(systemName: "xmark")!)
+                Image(systemName: "xmark")
+                    .foregroundColor(Color(.systemRed))
             }))
         }
     }

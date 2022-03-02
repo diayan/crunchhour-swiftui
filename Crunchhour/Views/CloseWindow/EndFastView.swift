@@ -205,7 +205,8 @@ struct EndFastView: View {
                 .navigationBarItems(leading: Button(action: {
                     self.dismissModal.wrappedValue.dismiss()
                 }, label: {
-                    Image(uiImage: UIImage(systemName: "xmark")!)
+                    Image(systemName: "xmark")
+                        .foregroundColor(Color(.systemRed))
                 }))
                 .sheet(isPresented: self.$isImagePickerDisplay) {
                     ImagePickerView(selectedImage: self.$selectedImage, sourceType: self.sourceType)

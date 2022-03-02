@@ -19,7 +19,8 @@ struct WeightListView: View {
             .navigationBarItems(leading: Button(action: {
                 self.dismissModal.wrappedValue.dismiss()
             }, label: {
-                Image(uiImage: UIImage(systemName: "xmark")!)
+                Image(systemName: "xmark")
+                    .foregroundColor(Color(.systemRed))
             }))
         }
     }

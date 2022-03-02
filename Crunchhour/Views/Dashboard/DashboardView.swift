@@ -8,11 +8,13 @@
 import SwiftUI
 
 struct DashboardView: View {
+    let fast: DailyFast
+
     @State private var showSettings = false
     @State private var startFast    = false
     
     var body: some View {
-        return ZStack {
+        return ZStack { //MARK: for recognition
             NavigationView {
                 ScrollView(showsIndicators: false) {
                     LazyVStack {
@@ -26,7 +28,7 @@ struct DashboardView: View {
                             Spacer()
                         }
                         Spacer()
-                        CrunchWindowCard()
+                        CrunchWindowCard(fast: fast)
                         HStack {
                             Text("Recent Note")
                                 .foregroundColor(.secondary)
@@ -67,9 +69,10 @@ struct DashboardView: View {
                 }, label: {
                     Image(systemName: "gearshape")
                         .foregroundColor(Color(.systemRed))
-                }).font(Font.system(size: 20, weight: .semibold, design: .rounded)).fullScreenCover(isPresented: $showSettings, content: {
+                }).font(Font.system(size: 20, weight: .semibold, design: .rounded))
+                .fullScreenCover(isPresented: $showSettings) {
                     SettingsView(schedule: Schedule(day: .Monday, duration: "3 hrs", startTime: Date()))
-                }),
+                },
                 trailing: Button(action: {
                     self.startFast.toggle()
                 }, label: {
@@ -84,7 +87,8 @@ struct DashboardView: View {
 }
 
 struct DashboardView_Previews: PreviewProvider {
+    static var fast = DailyFast.data[0]
     static var previews: some View {
-        DashboardView()
+        DashboardView(fast: fast)
     }
 }

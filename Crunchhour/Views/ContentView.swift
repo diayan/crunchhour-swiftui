@@ -8,6 +8,8 @@
 import SwiftUI
 
 struct ContentView: View {
+    let fast: DailyFast
+    
     @State private var selection: Tab = .dashboard
 
     enum Tab {
@@ -17,7 +19,7 @@ struct ContentView: View {
     
     var body: some View {
         TabView(selection: $selection) {
-            DashboardView()
+            DashboardView(fast: fast)
                 .tabItem {
                     Label("Home", systemImage: "rectangle.3.offgrid")
                 }
@@ -32,7 +34,8 @@ struct ContentView: View {
 }
 
 struct ContentView_Previews: PreviewProvider {
+    static var fast = DailyFast.data[0]
     static var previews: some View {
-        ContentView()
+        ContentView(fast: fast)
     }
 }

@@ -10,6 +10,7 @@ import Foundation
 
 struct CrunchWindowCard: View {
     // @Environment(.\presentationMode) var presentationMode
+    let fast: DailyFast
     @State private var showCloseWindowForm = false
     @State private var showDatePicker      = false
     @State private var startDate           = Date()
@@ -19,6 +20,7 @@ struct CrunchWindowCard: View {
         VStack {
             HStack{
                 VStack(alignment: .leading) {
+                    
                     Text("Your five hour window \nopened at 4:00pm")
                         .bold()
                         .fixedSize(horizontal: false, vertical: true)
@@ -26,21 +28,24 @@ struct CrunchWindowCard: View {
                         .foregroundColor(Color(.systemRed))
                     
                     Text("Closes in 3h 30 mins")
-                        .foregroundColor(.black)
+                        .foregroundColor(.secondary)
                         .font(.caption)
-                        .padding(.top, 4)
                 }
                 Spacer()
                 CountdownProgress()
             }
             .padding(.bottom, 16)
+    
+    
             Group {
                 DatePicker(selection: $startDate, displayedComponents: [.hourAndMinute]){
                     Text("Start Time")
+                        .foregroundColor(Color(.black))
                 }.accentColor(.red)
                 
                 DatePicker(selection: $endDate, displayedComponents: [.hourAndMinute]) {
                     Text("End Time")
+                        .foregroundColor(Color(.black))
                 }.accentColor(.red)
             }
             
@@ -70,8 +75,10 @@ struct CrunchWindowCard: View {
 }
 
 struct CrunchWindowCard_Previews: PreviewProvider {
+    static var fast = DailyFast.data[0]
+    
     static var previews: some View {
-        CrunchWindowCard()
+        CrunchWindowCard(fast: fast)
             .previewLayout(.sizeThatFits)
     }
 }

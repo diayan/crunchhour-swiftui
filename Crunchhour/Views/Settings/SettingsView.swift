@@ -63,11 +63,12 @@ struct SettingsView: View {
                     }
                 }
             }
-            .navigationBarTitle("Settings", displayMode: .inline)
+            .navigationTitle("Settings")
             .navigationBarItems(leading: Button(action: {
                 self.dismissModal.wrappedValue.dismiss()
             }, label: {
-                Image(uiImage: UIImage(systemName: "xmark")!)
+                Image(systemName: "xmark")
+                    .foregroundColor(Color(.systemRed))
             }))
         }
     }
