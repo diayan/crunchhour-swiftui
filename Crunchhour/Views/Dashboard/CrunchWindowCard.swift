@@ -33,19 +33,20 @@ struct CrunchWindowCard: View {
                 }
                 Spacer()
                 CountdownProgress()
+                    .padding(.leading, 4)
             }
-            .padding(.bottom, 16)
-    
+            .padding(.bottom)
+            .padding(.top)
     
             Group {
                 DatePicker(selection: $startDate, displayedComponents: [.hourAndMinute]){
                     Text("Start Time")
-                        .foregroundColor(Color(.black))
+                        .foregroundColor(Color(.label))
                 }.accentColor(.red)
                 
                 DatePicker(selection: $endDate, displayedComponents: [.hourAndMinute]) {
                     Text("End Time")
-                        .foregroundColor(Color(.black))
+                        .foregroundColor(Color(.label))
                 }.accentColor(.red)
             }
             
@@ -68,10 +69,10 @@ struct CrunchWindowCard: View {
                 }.fixedSize(horizontal: false, vertical: true)
             }
         }.padding()
-        .background(Color(.white))
-        .cornerRadius(15)
-        .shadow(color: Color.black, radius: 0, x: 0.0 , y: 0.2)
-    }    
+            .background(Color(.systemBackground))
+            .cornerRadius(15)
+            .shadow(color: Color.black, radius: 0, x: 0.0 , y: 0.2)
+    }
 }
 
 struct CrunchWindowCard_Previews: PreviewProvider {
