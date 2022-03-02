@@ -8,8 +8,21 @@
 import SwiftUI
 
 struct WeightListView: View {
+    @Environment(\.presentationMode) private var dismissModal
+
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        NavigationView {
+            ScrollView {
+                Text("hi again!")
+            }.padding()
+            .navigationBarTitle(Text("Add Weight"), displayMode: .inline)
+            .navigationBarItems(leading: Button(action: {
+                self.dismissModal.wrappedValue.dismiss()
+            }, label: {
+                Image(systemName: "xmark")
+                    .foregroundColor(Color(.systemRed))
+            }))
+        }
     }
 }
 
