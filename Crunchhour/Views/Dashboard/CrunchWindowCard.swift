@@ -9,72 +9,77 @@ import SwiftUI
 import Foundation
 
 struct CrunchWindowCard: View {
-   // @Environment(.\presentationMode) var presentationMode
+    // @Environment(.\presentationMode) var presentationMode
+    let fast: DailyFast
     @State private var showCloseWindowForm = false
     @State private var showDatePicker      = false
-    @State private var startDate = Date()
+    @State private var startDate           = Date()
+    @State private var endDate             = Date()
     
     var body: some View {
         VStack {
-            
-            HStack(alignment: .top){
+            HStack{
                 VStack(alignment: .leading) {
-                    Text("Your five hour window \n opened at 4:00pm")
+                    
+                    Text("Your five hour window \nopened at 4:00pm")
+                        .bold()
                         .fixedSize(horizontal: false, vertical: true)
-                        .font(.headline)
-                        .foregroundColor(.primary)
-                    Text("Closses in 3h 30mins")
-                        .foregroundColor(.black)
-                        .font(.title)
-                }.padding()
-                
+                        .font(.title3)
+                        .foregroundColor(Color(.systemRed))
+                    
+                    Text("Closes in 3h 30 mins")
+                        .foregroundColor(.secondary)
+                        .font(.caption)
+                }
                 Spacer()
-                
                 CountdownProgress()
-                    .frame(width: 80, height: 80, alignment: .center)
-            }.padding()
+                    .padding(.leading, 4)
+            }
+            .padding(.bottom)
+            .padding(.top)
+    
+            Group {
+                DatePicker(selection: $startDate, displayedComponents: [.hourAndMinute]){
+                    Text("Start Time")
+                        .foregroundColor(Color(.label))
+                }.accentColor(.red)
+                
+                DatePicker(selection: $endDate, displayedComponents: [.hourAndMinute]) {
+                    Text("End Time")
+                        .foregroundColor(Color(.label))
+                }.accentColor(.red)
+            }
             
             VStack(spacing: 0) {
-                
                 Divider()
-                
-                HStack {
-                    Button(action: {
-                        self.showDatePicker.toggle()
-                    }) {
-                        Text("Edit")
-                            .bold()
-                            .fixedSize()
-                    }.padding()
-                    .frame(maxWidth: .infinity)
-                    
-                    Divider()
-                    
+                HStack() {
                     Button(action: {
                         self.showCloseWindowForm.toggle()
                     }, label: {
                         Text("Close Window")
+                            .foregroundColor(Color(.systemRed))
                             .bold()
                             .fixedSize()
                     })
                     .fullScreenCover(isPresented: $showCloseWindowForm, content: {
-                        /*@START_MENU_TOKEN@*//*@PLACEHOLDER=Content@*/Text("Placeholder")/*@END_MENU_TOKEN@*/
+                        EndFastView()
                     })
                     .padding()
                     .frame(maxWidth: .infinity)
                 }.fixedSize(horizontal: false, vertical: true)
             }
-        }.frame( height:200)
-        .background(Color("foreground"))
-        .cornerRadius(15)
-        .padding(.leading)
-        .padding(.trailing)
-        .shadow(color: Color.black, radius: 0, x: 0.0 , y: 0.2)
-    }    
+        }.padding()
+            .background(Color(.systemBackground))
+            .cornerRadius(15)
+            .shadow(color: Color.black, radius: 0, x: 0.0 , y: 0.2)
+    }
 }
 
 struct CrunchWindowCard_Previews: PreviewProvider {
+    static var fast = DailyFast.data[0]
+    
     static var previews: some View {
-        CrunchWindowCard()
+        CrunchWindowCard(fast: fast)
+            .previewLayout(.sizeThatFits)
     }
 }

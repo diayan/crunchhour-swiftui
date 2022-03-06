@@ -9,9 +9,10 @@ import SwiftUI
 
 @main
 struct CrunchhourApp: App {
+    let fast = DailyFast.data[0]
     var body: some Scene {
         WindowGroup {
-            DashboardView()
+            ContentView(fast: fast)
         }
     }
 }
