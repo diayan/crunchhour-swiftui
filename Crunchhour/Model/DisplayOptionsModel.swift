@@ -10,14 +10,14 @@ import Foundation
 struct DisplayOptionsModel {
     var title: String
     var day: DayOfWeek
-//    var weight: MeasuringUnit
-//    var height: MeasuringUnit
+    var weight: MeasuringUnit
+    var height: MeasuringUnit
 }
 
-//enum MeasuringUnit {
-//    case Pounds
-//    case Kilograms
-//    case Stone
-//    case Centimeters
-//    case Feet
-//}
+enum MeasuringUnit {
+    case Pounds
+    case Kilograms
+    case Stone
+    case Centimeters
+    case Feet
+}
