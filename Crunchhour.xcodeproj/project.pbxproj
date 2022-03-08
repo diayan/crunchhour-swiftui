@@ -20,6 +20,7 @@
 		B2359BAF260AA32600BC3777 /* RecentEatingCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2359BAE260AA32600BC3777 /* RecentEatingCard.swift */; };
 		B239E1B72611F5D80077A1D4 /* CircularProgress.swift in Sources */ = {isa = PBXBuildFile; fileRef = B239E1B62611F5D80077A1D4 /* CircularProgress.swift */; };
 		B239E1BE26122B350077A1D4 /* CloseWindowEditor.swift in Sources */ = {isa = PBXBuildFile; fileRef = B239E1BD26122B350077A1D4 /* CloseWindowEditor.swift */; };
+		B23A50A427D81D70009CCA63 /* FastingState.swift in Sources */ = {isa = PBXBuildFile; fileRef = B23A50A327D81D70009CCA63 /* FastingState.swift */; };
 		B24426802627496600310ABA /* SectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B244267F2627496500310ABA /* SectionView.swift */; };
 		B2483E7D262869CD00FB8C66 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2483E7C262869CD00FB8C66 /* SettingsView.swift */; };
 		B2483E8526286FFC00FB8C66 /* SettingSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2483E8426286FFC00FB8C66 /* SettingSection.swift */; };
@@ -55,6 +56,7 @@
 		B2359BAE260AA32600BC3777 /* RecentEatingCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecentEatingCard.swift; sourceTree = "<group>"; };
 		B239E1B62611F5D80077A1D4 /* CircularProgress.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircularProgress.swift; sourceTree = "<group>"; };
 		B239E1BD26122B350077A1D4 /* CloseWindowEditor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CloseWindowEditor.swift; sourceTree = "<group>"; };
+		B23A50A327D81D70009CCA63 /* FastingState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FastingState.swift; sourceTree = "<group>"; };
 		B244267F2627496500310ABA /* SectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionView.swift; sourceTree = "<group>"; };
 		B2483E7C262869CD00FB8C66 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		B2483E8426286FFC00FB8C66 /* SettingSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingSection.swift; sourceTree = "<group>"; };
@@ -191,6 +193,7 @@
 				B2844541262DDB580073E68B /* DisplayOptionsModel.swift */,
 				B234C2C82632EDA500DF71D8 /* EmojiFeeling.swift */,
 				B21F59C826C41E10006BA6FA /* DailyFast.swift */,
+				B23A50A327D81D70009CCA63 /* FastingState.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -315,6 +318,7 @@
 				B2359BA02608C66C00BC3777 /* CrunchNoteCard.swift in Sources */,
 				B234C2C92632EDA500DF71D8 /* EmojiFeeling.swift in Sources */,
 				B2A6AD5526397B9C0021631C /* ImagePickerView.swift in Sources */,
+				B23A50A427D81D70009CCA63 /* FastingState.swift in Sources */,
 				B230337126420A65001B6D75 /* WeightListView.swift in Sources */,
 				B21D4004263AD2C100A4E779 /* WeightView.swift in Sources */,
 				B2844542262DDB580073E68B /* DisplayOptionsModel.swift in Sources */,
