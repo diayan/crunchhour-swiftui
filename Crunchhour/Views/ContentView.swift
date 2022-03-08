@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct ContentView: View {
-    let fast: DailyFast
+    let fast: Fast
     
     @State private var selection: Tab = .dashboard
 
@@ -34,7 +34,7 @@ struct ContentView: View {
 }
 
 struct ContentView_Previews: PreviewProvider {
-    static var fast = DailyFast.data[0]
+    static var fast = Fast.data[0]
     static var previews: some View {
         ContentView(fast: fast)
     }

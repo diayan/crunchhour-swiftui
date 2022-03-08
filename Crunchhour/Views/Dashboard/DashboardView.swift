@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct DashboardView: View {
-    let fast: DailyFast
+    let fast: Fast
 
     @State private var showSettings = false
     @State private var startFast    = false
@@ -87,7 +87,7 @@ struct DashboardView: View {
 }
 
 struct DashboardView_Previews: PreviewProvider {
-    static var fast = DailyFast.data[0]
+    static var fast = Fast.data[0]
     static var previews: some View {
         DashboardView(fast: fast)
     }

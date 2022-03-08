@@ -10,7 +10,7 @@ import Foundation
 
 struct CrunchWindowCard: View {
     // @Environment(.\presentationMode) var presentationMode
-    let fast: DailyFast
+    let fast: Fast
     @State private var showCloseWindowForm = false
     @State private var showDatePicker      = false
     @State private var startDate           = Date()
@@ -76,7 +76,7 @@ struct CrunchWindowCard: View {
 }
 
 struct CrunchWindowCard_Previews: PreviewProvider {
-    static var fast = DailyFast.data[0]
+    static var fast = Fast.data[0]
     
     static var previews: some View {
         CrunchWindowCard(fast: fast)

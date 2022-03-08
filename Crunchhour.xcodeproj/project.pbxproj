@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		B21D4004263AD2C100A4E779 /* WeightView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B21D4003263AD2C100A4E779 /* WeightView.swift */; };
 		B21D4008263AD2D300A4E779 /* LogWeight.swift in Sources */ = {isa = PBXBuildFile; fileRef = B21D4007263AD2D300A4E779 /* LogWeight.swift */; };
-		B21F59C926C41E10006BA6FA /* DailyFast.swift in Sources */ = {isa = PBXBuildFile; fileRef = B21F59C826C41E10006BA6FA /* DailyFast.swift */; };
+		B21F59C926C41E10006BA6FA /* Fast.swift in Sources */ = {isa = PBXBuildFile; fileRef = B21F59C826C41E10006BA6FA /* Fast.swift */; };
 		B230337126420A65001B6D75 /* WeightListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B230337026420A65001B6D75 /* WeightListView.swift */; };
 		B234C2C92632EDA500DF71D8 /* EmojiFeeling.swift in Sources */ = {isa = PBXBuildFile; fileRef = B234C2C82632EDA500DF71D8 /* EmojiFeeling.swift */; };
 		B234C2CC2632F61700DF71D8 /* EmojiView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B234C2CB2632F61700DF71D8 /* EmojiView.swift */; };
@@ -45,7 +45,7 @@
 /* Begin PBXFileReference section */
 		B21D4003263AD2C100A4E779 /* WeightView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeightView.swift; sourceTree = "<group>"; };
 		B21D4007263AD2D300A4E779 /* LogWeight.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogWeight.swift; sourceTree = "<group>"; };
-		B21F59C826C41E10006BA6FA /* DailyFast.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyFast.swift; sourceTree = "<group>"; };
+		B21F59C826C41E10006BA6FA /* Fast.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fast.swift; sourceTree = "<group>"; };
 		B230337026420A65001B6D75 /* WeightListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeightListView.swift; sourceTree = "<group>"; };
 		B234C2C82632EDA500DF71D8 /* EmojiFeeling.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmojiFeeling.swift; sourceTree = "<group>"; };
 		B234C2CB2632F61700DF71D8 /* EmojiView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmojiView.swift; sourceTree = "<group>"; };
@@ -192,7 +192,7 @@
 				B2483E8F2628730200FB8C66 /* NotificationModel.swift */,
 				B2844541262DDB580073E68B /* DisplayOptionsModel.swift */,
 				B234C2C82632EDA500DF71D8 /* EmojiFeeling.swift */,
-				B21F59C826C41E10006BA6FA /* DailyFast.swift */,
+				B21F59C826C41E10006BA6FA /* Fast.swift */,
 				B23A50A327D81D70009CCA63 /* FastingState.swift */,
 			);
 			path = Model;
@@ -341,7 +341,7 @@
 				B27940D82636A31300C82251 /* GraphCapsule.swift in Sources */,
 				B2359B9D2608C5EE00BC3777 /* CrunchWindowCard.swift in Sources */,
 				B284453F262DD9EC0073E68B /* DisplayOptions.swift in Sources */,
-				B21F59C926C41E10006BA6FA /* DailyFast.swift in Sources */,
+				B21F59C926C41E10006BA6FA /* Fast.swift in Sources */,
 				B2AAF1F72604CAC800E6C4C6 /* CrunchhourApp.swift in Sources */,
 				B2359BAB26091C8200BC3777 /* RecentEatingCardItem.swift in Sources */,
 			);
